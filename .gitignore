@@ -1,9 +1,11 @@
 .DS_Store
 .idea
+.gitignore
 *.ai
 *.log
 *.pdf
 *.psd
+*.fig
 *.sublime*
 node_modules/
 npm-debug.*
