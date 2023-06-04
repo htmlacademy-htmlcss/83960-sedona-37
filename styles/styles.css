@@ -20,6 +20,14 @@ body {
   text-transform: capitalize;
 }
 
+.site-navigation-link[aria-current="page"] {
+  text-decoration-line: underline;
+  text-decoration-color: #756257;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 21px;
+}
+
+
 .user-menu-link {
   color: #ffffff;
   font-weight: 700;
@@ -27,6 +35,10 @@ body {
   line-height: 20px;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.hero {
+  background-color: #ffffff;
 }
 
 .hero-image {
@@ -46,11 +58,83 @@ body {
 }
 
 .hero-content:nth-of-type(2) {
+/*
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+ */
+ text-align: center;
+}
+
+
+.advantages-item:nth-of-type(2n) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item:nth-of-type(3n) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item-text {
+  background-color: #82B3D3;
+}
+
+.advantages-item-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.advantages-item-content {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.services {
+  background-color: #ffffff;
+}
+
+.services-title {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
 }
+
+.services-content {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.services-item:nth-of-type(2n+1) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.services-item-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.services-item-content {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.hotel-search {
+  background-color: #ffffff;
+}
+
 
 
 /*
