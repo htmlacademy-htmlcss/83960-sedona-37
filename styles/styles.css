@@ -1,0 +1,66 @@
+body {
+  background-color: #f2f2f2;
+  color: #000000;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.main-page-header {
+  background-color: #ffffff;
+}
+
+.site-navigation-link {
+  color: #000000;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.user-menu-link {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.hero-image {
+  background-image: url("../images/hero-background-bottom.svg"), url("../images/hero-background.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom left, top left;
+  background-size: contain;
+  background-clip: border-box;
+}
+
+.hero-content:nth-of-type(1) {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.hero-content:nth-of-type(2) {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+
+/*
+.visually-hidden {
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%); /* browsers in the future
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+} */
