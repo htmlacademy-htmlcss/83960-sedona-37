@@ -27,21 +27,29 @@ body {
   text-underline-offset: 21px;
 }
 
-
 .user-menu-link {
+  text-decoration: none;
   color: #ffffff;
+}
+
+.favourite-count {
+  background-color: #7DB54F;
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+}
+
+
+.user-menu-order {
+  background-color: #756157;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  text-decoration: none;
   text-transform: uppercase;
 }
 
 .hero {
   background-color: #ffffff;
-}
-
-.hero-image {
   background-image: url("../images/hero-background-bottom.svg"), url("../images/hero-background.jpg");
   background-repeat: no-repeat;
   background-position: bottom left, top left;
@@ -49,7 +57,10 @@ body {
   background-clip: border-box;
 }
 
-.hero-content:nth-of-type(1) {
+.slogan {
+  background-color: #ffffff;
+}
+.slogan-title {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -57,12 +68,7 @@ body {
   text-align: center;
 }
 
-.hero-content:nth-of-type(2) {
-/*
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
- */
+.slogan-text {
  text-align: center;
 }
 
@@ -198,15 +204,33 @@ body {
   cursor: pointer;
 }
 
+.main-page-footer {
+  background-color: #ffffff;
+}
+
+.social-link-vkontakte {
+  width: 24px;
+  height: 14px;
+  display: block;
+  /* padding: 13px 11.67px; */
+  mask: url(../images/social/vkontakte.svg) no-repeat center;
+  -webkit-mask: url(../images/social/vkontakte.svg) no-repeat center;
+  background-color: tomato;
+}
 
 /*
+.social-link-vkontakte::before {
+  content: url(../images/social/vkontakte.svg);
+}
+
+ */
 .visually-hidden {
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%); /* browsers in the future
+  /*clip: rect(1px 1px 1px 1px);  IE6, IE7 */
+  /* clip: rect(1px, 1px, 1px, 1px); */
+  clip-path: inset(50%); /* browsers in the future */
   height: 1px;
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
   width: 1px;
-} */
+}
