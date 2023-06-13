@@ -3,8 +3,8 @@
 /* Полужирный курсив */
 @font-face {
     font-family: "PT Sans";
-    src: url("PTSans-BoldItalic.woff2") format("woff2"),
-        url("PTSans-BoldItalic.woff") format("woff");
+    src: url("../fonts/PTSans-BoldItalic.woff2") format("woff2"),
+        url("../fonts/PTSans-BoldItalic.woff") format("woff");
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -13,8 +13,8 @@
 /* Обычный курсив */
 @font-face {
     font-family: "PT Sans";
-    src: url("PTSans-Italic.woff2") format("woff2"),
-        url("PTSans-Italic.woff") format("woff");
+    src: url("../fonts/PTSans-Italic.woff2") format("woff2"),
+        url("../fonts/PTSans-Italic.woff") format("woff");
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -23,8 +23,8 @@
 /* Полужирный прямой */
 @font-face {
     font-family: "PT Sans";
-    src: url("PTSans-Bold.woff2") format("woff2"),
-        url("PTSans-Bold.woff") format("woff");
+    src: url("../fonts/PTSans-Bold.woff2") format("woff2"),
+        url("../fonts/PTSans-Bold.woff") format("woff");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -33,8 +33,8 @@
 /* Обычный прямой */
 @font-face {
     font-family: "PT Sans";
-    src: url("PTSans-Regular.woff2") format("woff2"),
-        url("PTSans-Regular.woff") format("woff");
+    src: url("../fonts/PTSans-Regular.woff2") format("woff2"),
+        url("../fonts/PTSans-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -102,11 +102,11 @@ body {
 /* Стили для блока hero */
 
 .hero {
-  background-color: #ffffff;
+  background-color: #7F868A;
   background-image: url("../images/hero-background-bottom.svg"), url("../images/hero-background.jpg");
   background-repeat: no-repeat;
   background-position: bottom left, top left;
-  background-size: contain;
+  background-size: 100% auto;
   background-clip: border-box;
 }
 
@@ -321,22 +321,22 @@ body {
   color: #333333;
 }
 
-.type-view-list {
+.mode-view-list {
   list-style-type: none;
   display: flex;
 }
 
-.type-view-item {
+.mode-view-link {
+  display: block;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
 
-.type-view-item-selected {
-  border: 2px solid #000000;
-  border-radius: 4px;
+.mode-show-grid {
+  border-color:#000000;
 }
 
-.type-view-link::before {
+.mode-view-link::before {
   display: block;
   content: "";
   width: 16px;
@@ -345,19 +345,19 @@ body {
   background-color: #000000;
 }
 
-.type-view-grid::before {
-  mask: url("../images/view/mode-view-cards.svg") no-repeat center;
-  -webkit-mask: url("../images/view/mode-view-cards.svg") no-repeat center;
+.mode-show-grid::before {
+  mask: url("../images/view/mode-view-cards-grid.svg") no-repeat center;
+  -webkit-mask: url("../images/view/mode-view-cards-grid.svg") no-repeat center;
 }
 
-.type-view-card::before {
-  mask: url("../images/view/mode-view-one.svg") no-repeat center;
-  -webkit-mask: url("../images/view/mode-view-one.svg") no-repeat center;
+.mode-show-card::before {
+  mask: url("../images/view/mode-view-one-card.svg") no-repeat center;
+  -webkit-mask: url("../images/view/mode-view-one-card.svg") no-repeat center;
 }
 
-.type-view-list::before {
-  mask: url("../images/view/mode-view-list.svg") no-repeat center;
-  -webkit-mask: url("../images/view/mode-view-list.svg") no-repeat center;
+.mode-show-list::before {
+  mask: url("../images/view/mode-view-cards-list.svg") no-repeat center;
+  -webkit-mask: url("../images/view/mode-view-cards-list.svg") no-repeat center;
 }
 
 .hotel-list {
@@ -452,11 +452,12 @@ body {
   background-image: url(../images/subscribe-background.jpg);
   background-repeat: no-repeat;
   background-position: top left;
-  background-size: cover;
+  background-size: 100% auto;
+  background-color: #5a96bd;
+  color: #ffffff;
 }
 
 .subscribe-title {
-  color: #ffffff;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -465,7 +466,6 @@ body {
 }
 
 .subscribe-content {
-  color: #ffffff;
   text-align: center;
 }
 
@@ -476,6 +476,7 @@ body {
 }
 
 .subscribe-form-button-submit {
+  appearance: none;
   color: #ffffff;
   background-color: #82B3D3;
   font-weight: 700;
@@ -501,37 +502,46 @@ body {
   display: flex;
  }
 
+ .social-link::before {
+  display: block;
+  content: "";
+  background-color: #83B3D3;
+ }
+
  .social-link-vkontakte::before {
   width: 24px;
   height: 14px;
-  display: block;
-  content: "";
   padding: 13px 12px;
-  mask: url(../images/social/vkontakte.svg) no-repeat center;
-  -webkit-mask: url(../images/social/vkontakte.svg) no-repeat center;
-  background-color: #83B3D3;
+  mask-image: url("../images/social/vkontakte.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url("../images/social/vkontakte.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 
 .social-link-telegram::before {
   width: 18px;
   height: 15px;
-  display: block;
-  content: "";
   padding: 12px 15px 13px 15px;
-  mask: url(../images/social/telegram.svg) no-repeat center;
-  -webkit-mask: url(../images/social/telegram.svg) no-repeat center;
-  background-color: #83B3D3;
+  mask-image: url("../images/social/telegram.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url("../images/social/telegram.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 
 .social-link-youtube::before {
   width: 22px;
   height: 17px;
-  display: block;
-  content: "";
   padding: 11.5px 13px;
-  mask: url(../images/social/youtube.svg) no-repeat center;
-  -webkit-mask: url(../images/social/youtube.svg) no-repeat center;
-  background-color: #83B3D3;
+  mask-image: url("../images/social/youtube.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url("../images/social/youtube.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 
 /* Стили для блока контактный телефон */
@@ -551,8 +561,12 @@ body {
   height: 33px;
   display: block;
   content: "";
-  mask: url(../images/html-academy.svg) no-repeat center;
-  -webkit-mask: url(../images/html-academy.svg) no-repeat center;
+  mask-image: url("../images/html-academy.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url("../images/html-academy.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
   background-color: #000000;
 }
 
