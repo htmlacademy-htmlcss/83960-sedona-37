@@ -42,6 +42,10 @@
 
 /* Начало стилизации */
 
+:root {
+  --fav-count: "12";
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -66,7 +70,8 @@ body {
 }
 
 .site-navigation {
-  display: flex;
+  display: grid;
+  grid-template-columns: 138px 1fr 88px 180px;
 }
 
 .logo-image {
@@ -84,9 +89,8 @@ body {
 }
 
 .site-navigation-list {
-  width: 339px;
   margin-left: 30px;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 
@@ -135,6 +139,10 @@ body {
   -webkit-mask-position: center;
 }
 
+.user-menu-favourite {
+  position: relative;
+}
+
 .user-menu-favourite::before {
   mask-image: url("../images/favourite.svg");
   mask-repeat: no-repeat;
@@ -144,23 +152,22 @@ body {
   -webkit-mask-position: center;
 }
 
-
-.favourite-count {
+.user-menu-favourite::after {
   display: block;
   width: 20px;
   height: 10px;
+  content: var(--fav-count);
   border-radius: 50%;
   background-color: #7DB54F;
   font-size: 10px;
   line-height: 10px;
   text-align: center;
-  position: absolute;
-  top: 11px;
-  right: 293px;
   padding-top: 5px;
   padding-bottom: 5px;
+  position: absolute;
+  top: 11px;
+  right: 4px;
 }
-
 
 .user-menu-order {
   width: 160px;
@@ -184,7 +191,7 @@ body {
 /* Стили для блока hero */
 
 .hero {
-  width: 1200px;
+  width: 1060px;
   margin: 0 auto;
   background-color: #7F868A;
   background-image: url("../images/hero-background-bottom.svg"), url("../images/hero-background.jpg");
@@ -192,6 +199,7 @@ body {
   background-position: bottom left, top left;
   background-size: 100% auto;
   background-clip: border-box;
+  padding: 51px 70px 82px 70px;
 }
 
 .hero-image {
@@ -199,16 +207,25 @@ body {
   width: 458px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 51px;
-  padding-bottom: 82px;
 }
 
 /* Стили для блока advantages */
 
+.advantages {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .slogan {
   background-color: #ffffff;
+  /* width: 1200px; */
+  /* margin: 0 auto; */
+  padding: 69px 0;
 }
 .slogan-title {
+  width: 620px;
+  margin: 0 auto;
+  margin-bottom: 25px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -217,7 +234,30 @@ body {
 }
 
 .slogan-text {
- text-align: center;
+  margin: 0;
+  text-align: center;
+}
+
+.advantages-list {
+  /* width: 1200px; */
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+}
+
+.item-real-town {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  color: #ffffff;
+  background-color: #82B3D3;
+  padding: 102px 85px;
+}
+
+.item-real-town-image {
+  grid-column-start: 2;
+  grid-column-end: 4;
 }
 
 
@@ -239,12 +279,15 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
+  width: 175px;
 }
 
 .advantages-item-content {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
+  width: 230px;
 }
 
 /* Стили для блока services */
