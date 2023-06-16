@@ -63,8 +63,6 @@ body {
 .catalog-page-header
 {
   background-color: #ffffff;
-  width: 1060px;
-  margin: 0 auto;
   padding-left: 70px;
   padding-right: 70px;
 }
@@ -188,11 +186,14 @@ body {
 /* ---------------------------------------------------------------------------------- */
 /* Cтили для index.html */
 
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 /* Стили для блока hero */
 
 .hero {
-  width: 1060px;
-  margin: 0 auto;
   background-color: #7F868A;
   background-image: url("../images/hero-background-bottom.svg"), url("../images/hero-background.jpg");
   background-repeat: no-repeat;
@@ -211,20 +212,12 @@ body {
 
 /* Стили для блока advantages */
 
-.advantages {
-  width: 1200px;
-  margin: 0 auto;
-}
-
 .slogan {
   background-color: #ffffff;
-  /* width: 1200px; */
-  /* margin: 0 auto; */
-  padding: 69px 0;
+  padding: 69px 70px;
 }
 .slogan-title {
-  width: 620px;
-  margin: 0 auto;
+  margin: 0;
   margin-bottom: 25px;
   font-weight: 700;
   font-size: 30px;
@@ -233,44 +226,54 @@ body {
   text-align: center;
 }
 
+.slogan-title span {
+  display: block;
+}
+
 .slogan-text {
   margin: 0;
   text-align: center;
 }
 
 .advantages-list {
-  /* width: 1200px; */
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(3, 33.3%);
+  grid-template-rows: repeat(3, auto);
 }
 
-.item-real-town {
-  grid-column-start: 1;
-  grid-column-end: 2;
+.advantages-item-start {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  display: flex;
+}
+
+.advantages-item-last {
+  grid-column: 1 / -1;
+  grid-row-start: -1;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.advantages-item-text {
   color: #ffffff;
   background-color: #82B3D3;
   padding: 102px 85px;
 }
 
-.item-real-town-image {
-  grid-column-start: 2;
-  grid-column-end: 4;
+.advantages-item-inner {
+  padding: 112.5px 85px;
 }
 
 
-.advantages-item:nth-of-type(2n) {
+.advantages-item-inner:nth-of-type(even) {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.advantages-item:nth-of-type(3n) {
+.advantages-item-inner:nth-of-type(odd) {
   background-color: rgba(131, 179, 211, 0.2);
-}
-
-.advantages-item-text {
-  background-color: #82B3D3;
 }
 
 .advantages-item-title {
@@ -280,14 +283,18 @@ body {
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-  width: 175px;
+  margin-bottom: 62px;
+}
+
+.advantages-item-title span {
+  display: block;
 }
 
 .advantages-item-content {
+  margin: 0;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
-  width: 230px;
 }
 
 /* Стили для блока services */
