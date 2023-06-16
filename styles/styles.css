@@ -303,11 +303,27 @@ body {
   background-color: #ffffff;
 }
 
+.services-intro-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+
+  padding: 64px 70px;
+}
+
 .services-title {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
+  margin: 0;
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  box-ordinal-group: 2;
 }
 
 .services-content {
@@ -316,7 +332,74 @@ body {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  box-ordinal-group: 1;
 }
+
+.services-content span {
+  display: block;
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  box-ordinal-group: 0;
+}
+
+.services-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-items: center;
+  flex-wrap: wrap;
+}
+
+.services-item {
+  width: 400px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  padding: 81px 85px;
+}
+
+.services-item::before {
+  display: block;
+  width: 75px;
+  height: 75px;
+  content: "";
+  background-color: #83B3D3;
+  margin-bottom: 30px;
+}
+
+.services-item-house::before {
+  mask-image: url("../images/services/house.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url("../images/services/house.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+.services-item-food::before {
+  mask-image: url("../images/services/food.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url("../images/services/food.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+.services-item-souvenir::before {
+  mask-image: url("../images/services/souvenir.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url("../images/services/souvenir.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
 
 .services-item:nth-of-type(2n+1) {
   background-color: rgba(131, 179, 211, 0.12);
@@ -326,6 +409,8 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  margin: 0;
+  margin-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -334,6 +419,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+  margin: 0;
   text-align: center;
 }
 
