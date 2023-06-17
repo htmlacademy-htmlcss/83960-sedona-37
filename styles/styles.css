@@ -57,6 +57,11 @@ body {
   line-height: 26px;
 }
 
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 /* Стили для хедера страницы */
 
 .main-page-header,
@@ -186,10 +191,6 @@ body {
 /* ---------------------------------------------------------------------------------- */
 /* Cтили для index.html */
 
-.page-container {
-  width: 1200px;
-  margin: 0 auto;
-}
 
 /* Стили для блока hero */
 
@@ -468,35 +469,83 @@ body {
 /* Cтили для catalog.html */
 
 .filter-wrapper {
+  background-color: #2B3E45;
   background-image: url(../images/filter-form-background.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color:#ffffff;
+  padding: 35px 70px 70px 70px;
+
 }
 
 /* Стили для внутреннего хедера */
 
+.main-catalog-header {
+  margin-bottom: 40px;
+}
+
 .main-catalog-header-title {
   font-size: 60px;
   line-height: 78px;
+  margin: 0;
+  margin-bottom: 8px;
 }
 
 .breadcrumbs {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .breadcrumbs-link {
+  height: 100%;
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
   text-decoration: none;
+  display: grid;
+  grid-template-columns: 24px auto;
 }
+
+.breadcrumbs-link::before {
+  display: block;
+  content: "";
+  /* width: 12px; */
+  height: 100%;
+  background-color: #ffffff;
+  align-self: center;
+  mask-image: url("../images/link-separator.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url("../images/link-separator.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+.breadcrumbs-link-home::before {
+  mask-image: url("../images/home-link.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url("../images/home-link.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
 
 /* Стили для раздела фильтров */
 
+.filter-form {
+  display: flex;
+  justify-content: space-between;
+}
+
 .filter-form-fieldsets {
   border: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 32px;
 }
 
 .filter-form-fieldsets legend {
@@ -509,36 +558,121 @@ body {
   font-size: 18px;
   line-height: 23px;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.filter-form-cost input {
+/* Блок Инфраструктура */
+
+.filter-form-infra {
+  width: max-content;
+}
+
+.filter-form-infra-item:not(last-child) {
+  margin-bottom: 16px;
+}
+
+/* Блок Тип жилья */
+
+.filter-form-housing {
+  width: max-content;
+  /* margin-left: 70px; */
+}
+
+.filter-form-housing-item:not(last-child) {
+  margin-bottom: 16px;
+}
+
+/* Блок Стоимость */
+
+.filter-form-cost {
+  width: max-content;
+  /* margin-left: 140px; */
+}
+
+.filter-form-cost-max,
+.filter-form-cost-min
+{
+  box-sizing: border-box;
+  width: 143px;
+  position: relative;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: #000000;
+  padding: 12px 25px 12px 20px;
+}
+
+.filter-form-cost-max::-webkit-inner-spin-button,
+.filter-form-cost-max::-webkit-outer-spin-button,
+.filter-form-cost-min::-webkit-inner-spin-button,
+.filter-form-cost-min::-webkit-outer-spin-button
+{
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.filter-form-cost-max,
+.filter-form-cost-min,
+.filter-form-cost-max:hover,
+.filter-form-cost-min:hover,
+.filter-form-cost-max:focus,
+.filter-form-cost-min:focus
+{
+  appearance: none;
+  -moz-appearance: textfield;
 }
 
 .filter-form-cost label {
+  position: relative;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
   color: #000000;
 }
 
+.filter-form-cost label span {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.filter-form-cost-range {
+  display: block;
+  width: 290px;
+  margin-top: 36px;
+
+}
+
+/* Блок Кнопки */
+
+.filter-form-buttons {
+  width: min-content;
+  padding-top: 56px;
+}
+
 .filter-form-buttons .button {
+  display: block;
+  border: none;
+  border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .filter-submit-button {
   background-color: #82B3D3;
+  padding: 8px 50px;
+  margin-bottom: 32px;
 }
 
 .filter-reset-button {
   background-color: transparent;
+  padding: 8px 57.5px;
 }
 
 /* Стили для раздела Каталог */
