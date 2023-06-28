@@ -44,10 +44,35 @@
 
 :root {
   --fav-count: "12";
+
+  /* Цвета для текста */
   --text-basic: #000000;
   --text-second: #333333;
   --text-background: #FFFFFF;
   --text-background-small: #FFFFFF;
+  --text-error: #FF5757;
+
+  /* Цвета для кнопок */
+  --button-basic: #756157;
+  --button-second: #82B3D3;
+  --button-select: #7DB54F;
+
+  /* Цвета для фона */
+  --background-basic: #FFFFFF;
+  --background-primary: #82B3D3;
+  --background-second-1: rgba(131, 179, 211, 0.12);
+  --background-second-2: rgba(131, 179, 211, 0.2);
+  --background-body: #F2F2F2;
+
+  /* Цвета для иконок */
+  --icon-basic: #000000;
+  --icon-second: #83B3D3;
+  --icon-text: #7DB54F;
+
+  /* Цвета для форм */
+  --form-input: #3F5E72;
+  --form-elements-1: #E5E5E5;
+  --form-elements-2: #F2F2F2;
 }
 
 html {
@@ -57,7 +82,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
+  background-color: var(--background-body);
   color: var(--text-second);
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
@@ -67,9 +92,12 @@ body {
   min-height: 100%;
 }
 
+/* TODO: Перепроверить цвет шрифта для всех блоков */
+
 .page-container {
   width: 1200px;
   margin: 0 auto;
+  background-color: var(--background-basic);
   display: flex;
   flex-direction: column;
 }
@@ -79,26 +107,29 @@ body {
 .main-page-header,
 .catalog-page-header
 {
-  background-color: #ffffff;
+  /* background-color: var(--background-basic); */
   padding-left: 70px;
   padding-right: 70px;
+  display: flex;
+  gap: 30px;
 }
 
 .site-navigation {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  min-width: 890px;
 }
 
 .logo-image {
   display: block;
   margin-bottom: -6px;
   max-width: 100%;
+  position: relative;
 }
 
 .logo {
   min-width: 140px;
-  margin-right: 10px;
 }
 
 .site-navigation-list,
@@ -119,7 +150,7 @@ body {
 
 .site-navigation-link {
   display: block;
-  color: #000000;
+  color: var(--text-basic);
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -132,7 +163,7 @@ body {
   text-decoration-line: underline;
   text-decoration-color: #756257;
   text-decoration-thickness: 2px;
-  text-underline-offset: 25px;
+  text-underline-offset: 22px;
 }
 
 .user-menu-list {
@@ -142,7 +173,7 @@ body {
 
 .user-menu-link {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--text-background);
   display: block;
 }
 
@@ -219,7 +250,8 @@ body {
 /* Стили для блока hero */
 
 .hero {
-  background-color: #7F868A;
+  color: var(--text-basic);
+  background-color: #779EC2;
   background-image: url("../images/hero-background-bottom.svg"), url("../images/hero-background.jpg");
   background-repeat: no-repeat;
   background-position: bottom left, top left;
@@ -227,6 +259,8 @@ body {
   background-clip: border-box;
   padding: 51px 70px 82px 70px;
 }
+
+/* TODO: Перепроверить цвет фона для всех блоков */
 
 .hero-image {
   display: block;
@@ -238,7 +272,7 @@ body {
 /* Стили для блока advantages */
 
 .slogan {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   padding: 69px 70px;
 }
 .slogan-title {
@@ -249,6 +283,7 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   text-align: center;
+  color: var(--text-basic);
 }
 
 .slogan-title span {
@@ -266,39 +301,7 @@ body {
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(3, 33.3%);
-  grid-template-rows: repeat(3, auto);
-}
-
-.advantages-item-start {
-  grid-column: 1 / -1;
-  grid-row: 1 / 2;
-  display: flex;
-}
-
-.advantages-item-last {
-  grid-column: 1 / -1;
-  grid-row-start: -1;
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-.advantages-item-text {
-  color: #ffffff;
-  background-color: #82B3D3;
-  padding: 102px 85px;
-}
-
-.advantages-item-inner {
-  padding: 112.5px 85px;
-}
-
-
-.advantages-item-inner:nth-of-type(even) {
-  background-color: rgba(131, 179, 211, 0.12);
-}
-
-.advantages-item-inner:nth-of-type(odd) {
-  background-color: rgba(131, 179, 211, 0.2);
+  grid-template-rows: repeat(300, auto);
 }
 
 .advantages-item-title {
@@ -322,19 +325,8 @@ body {
   height: 2px;
   background-color: rgba(255, 255, 255, 0.3);
   margin: 0 auto;
+  margin-top: 30px;
   margin-bottom: 30px;
-}
-
-.advantages-item-divider {
-  width: 60px;
-  height: 2px;
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.3);
-  margin-bottom: 30px;
-}
-
-.advantages-item-inner .advantages-item-divider {
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .advantages-item-content {
@@ -344,10 +336,50 @@ body {
   text-align: center;
 }
 
+
+.advantages-item-start {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  display: flex;
+}
+
+.advantages-item-last {
+  grid-column: 1 / -1;
+  grid-row: -1 / -1;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.advantages-item-text {
+  color: var(--text-background);
+  background-color: var(--background-primary);
+  padding: 102px 85px;
+}
+
+.advantages-item-inner {
+  padding: 112.5px 85px;
+}
+
+.advantages-item-inner .advantages-item-title {
+  color: var(--text-basic);
+}
+
+.advantages-item-inner .advantages-item-title::after {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.advantages-item-inner:nth-of-type(even) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item-inner:nth-of-type(odd) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
 /* Стили для блока services */
 
 .services {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
 }
 
 .services-intro-wrapper {
