@@ -44,6 +44,7 @@
 
 :root {
   --fav-count: "12";
+  --link-padding: 16px;
 
   /* Цвета для текста */
   --text-basic: #000000;
@@ -189,10 +190,17 @@ body {
 }
 
 .site-navigation-link[aria-current="page"] {
-  text-decoration-line: underline;
-  text-decoration-color: #756257;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 22px;
+  position: relative;
+}
+
+.site-navigation-link[aria-current="page"]::after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: calc(100% - var(--link-padding)*2);
+  background-color: #756257;
+  position: absolute;
+  bottom: -1px;
 }
 
 .user-menu-list {
@@ -223,32 +231,14 @@ body {
   -webkit-mask-image: url("../images/search.svg");
 }
 
-.user-menu-favourite {
-  position: relative;
-}
-
 .user-menu-favourite::before {
   mask-image: url("../images/favourite.svg");
   -webkit-mask-image: url("../images/favourite.svg");
 }
-/*
-.user-menu-favourite::after {
-  display: block;
-  width: 20px;
-  height: 10px;
-  content: var(--fav-count);
-  border-radius: 50%;
-  background-color: #7DB54F;
-  font-size: 10px;
-  line-height: 10px;
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  position: absolute;
-  top: 11px;
-  right: 4px;
+
+.user-menu-favourite {
+  position: relative;
 }
- */
 
 .favourite-count {
   min-width: 20px;
@@ -265,7 +255,6 @@ body {
   left: 55%;
 }
 
-
 .user-menu-order {
   min-width: 160px;
   background-color: #756157;
@@ -280,7 +269,6 @@ body {
 .main-index {
   flex-grow: 1;
 }
-
 
 /* Стили для блока hero */
 
@@ -306,6 +294,7 @@ body {
 .slogan {
   padding: 69px 70px;
 }
+
 .slogan-title {
   margin: 0;
   margin-bottom: 25px;
