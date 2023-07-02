@@ -89,7 +89,19 @@ body {
   font-size: 22px;
   line-height: 26px;
   min-width: 1280px;
-  min-height: 100%;
+  height: 100%;
+}
+
+.input-text {
+  display: block;
+  appearance: none;
+  border: none;
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--text-basic);
+  background-color: var(--background-body);
 }
 
 .button{
@@ -114,6 +126,7 @@ body {
 
 .page-container {
   width: 1200px;
+  min-height: 100%;
   margin: 0 auto;
   background-color: var(--background-basic);
   display: flex;
@@ -218,7 +231,7 @@ body {
   mask-image: url("../images/favourite.svg");
   -webkit-mask-image: url("../images/favourite.svg");
 }
-
+/*
 .user-menu-favourite::after {
   display: block;
   width: 20px;
@@ -235,6 +248,23 @@ body {
   top: 11px;
   right: 4px;
 }
+ */
+
+.favourite-count {
+  min-width: 20px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #7DB54F;
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: absolute;
+  top: 20%;
+  left: 55%;
+}
+
 
 .user-menu-order {
   min-width: 160px;
@@ -906,6 +936,10 @@ body {
   gap: 8px;
 }
 
+.pagination-item {
+  display: flex;
+}
+
 .pagination-link {
   display: block;
   background-color: var(--background-primary);
@@ -1005,7 +1039,6 @@ body {
 .main-page-footer,
 .catalog-page-footer
 {
-  /* background-color: #ffffff; */
   padding: 40px 70px 30px 70px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
