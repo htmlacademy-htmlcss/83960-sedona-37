@@ -848,6 +848,9 @@ body {
 
 .hotel-card-image {
   display: block;
+  width: 300px;
+  object-fit: cover;
+  max-width: 100%;
 }
 
 .hotel-card-link-title {
