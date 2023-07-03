@@ -566,38 +566,44 @@ body {
   display: flex;
 }
 
+.breadcrumbs-item:not(:first-child) {
+  display: flex;
+}
+
+.breadcrumbs-item:not(:first-child)::before {
+  display: block;
+  content: "";
+  width: 6px;
+  height: 6px;
+  align-self: center;
+  border-top: 2px solid var(--background-basic);
+  border-right: 2px solid var(--background-basic);
+  transform: rotate(45deg);
+  margin: 0 11px;
+}
+
 .breadcrumbs-link {
+  display: block;
   height: 100%;
   font-size: 16px;
   line-height: 21px;
   color: inherit;
   text-decoration: none;
-  display: grid;
-  grid-template-columns: 24px auto;
 }
 
-.breadcrumbs-link::before {
+.breadcrumbs-link-home::before {
   display: block;
   content: "";
   width: 12px;
   height: inherit;
   background-color: var(--background-basic);
   align-self: center;
-  mask-image: url("../images/link-separator.svg");
-  mask-repeat: no-repeat;
-  mask-position: center;
-  -webkit-mask-image: url("../images/link-separator.svg");
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-}
-
-.breadcrumbs-link-home::before {
-  mask-image: url("../images/home-link.svg");
-  mask-repeat: no-repeat;
-  mask-position: center;
   -webkit-mask-image: url("../images/home-link.svg");
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
+  mask-image: url("../images/home-link.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
 }
 
 
@@ -895,17 +901,37 @@ body {
   padding: 8px 17px;
 }
 
-.hotel-rating-stars::before {
+.hotel-rating-stars {
   display: block;
   content: "";
   background-color: var(--icon-second);
   min-height: 37px;
-  mask-image: url("../images/rating/four-stars.svg");
-  -webkit-mask-image: url("../images/rating/four-stars.svg");
+  mask-image: url("../images/rating/one-star.svg");
+  -webkit-mask-image: url("../images/rating/one-star.svg");
   mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-repeat: space no-repeat;
   mask-position: center;
-  -webkit-mask-position: center;
+  -webkit-mask-position: left center;
+}
+
+.five-stars {
+  width: 107px;
+}
+
+.four-stars {
+  width: 89px;
+}
+
+.three-stars {
+  width: 66px;
+}
+
+.two-stars {
+  width: 42px;
+}
+
+.one-star {
+  width: 21px;;
 }
 
 .hotel-rating-value {
