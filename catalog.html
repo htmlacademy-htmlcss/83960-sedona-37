@@ -48,7 +48,7 @@
               </a>
             </li>
           </ul>
-          <button class="button user-menu-order" type="button">
+          <button class="button button-brown user-menu-order" type="button">
             Хочу сюда!
           </button>
         </nav>
@@ -73,23 +73,25 @@
             </ul>
           </header>
           <section class="filter">
-            <h2 class="visually-hidden">Критерии выбора отеля</h2>
+            <h2 class="visually-hidden">
+              Критерии выбора отеля
+            </h2>
             <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
               <fieldset class="filter-form-fieldsets filter-form-infra">
                 <legend>Инфраструктура</legend>
                 <ul class="filter-form-lists filter-form-infra-list">
                   <li class="filter-form-infra-item">
-                    <input type="checkbox" name="filter-form-infra-pool" id="filter-form-infra-pool" value="pool"
+                    <input type="checkbox" class="filter-form-infra-pool" name="filter-form-infra-pool" id="filter-form-infra-pool" value="pool"
                       checked>
                     <label for="filter-form-infra-pool">Бассейн</label>
                   </li>
                   <li class="filter-form-infra-item">
-                    <input type="checkbox" name="filter-form-infra-parking" id="filter-form-infra-parking"
+                    <input type="checkbox" class="filter-form-infra-pool" name="filter-form-infra-parking" id="filter-form-infra-parking"
                       value="parking" checked>
                     <label for="filter-form-infra-parking">Парковка</label>
                   </li>
                   <li class="filter-form-infra-item">
-                    <input type="checkbox" name="filter-form-infra-wifi" id="filter-form-infra-wifi" value="wifi">
+                    <input type="checkbox" class="filter-form-infra-pool" name="filter-form-infra-wifi" id="filter-form-infra-wifi" value="wifi">
                     <label for="filter-form-infra-wifi">Wi-Fi</label>
                   </li>
                 </ul>
@@ -98,16 +100,16 @@
                 <legend>Тип жилья</legend>
                 <ul class="filter-form-lists filter-form-housing-list">
                   <li class="filter-form-housing-item">
-                    <input type="radio" name="filter-form-housing-type" id="filter-form-housing-hotel" value="hotel"
+                    <input type="radio" class="filter-form-housing-type" name="filter-form-housing-type" id="filter-form-housing-hotel" value="hotel"
                       checked>
                     <label for="filter-form-housing-hotel">Гостиница</label>
                   </li>
                   <li class="filter-form-housing-item">
-                    <input type="radio" name="filter-form-housing-type" id="filter-form-housing-motel" value="motel">
+                    <input type="radio" class="filter-form-housing-type" name="filter-form-housing-type" id="filter-form-housing-motel" value="motel">
                     <label for="filter-form-housing-motel">Мотель</label>
                   </li>
                   <li class="filter-form-housing-item">
-                    <input type="radio" name="filter-form-housing-type" id="filter-form-housing-aparts" value="aparts">
+                    <input type="radio" class="filter-form-housing-type" name="filter-form-housing-type" id="filter-form-housing-aparts" value="aparts">
                     <label for="filter-form-housing-aparts">Апартаменты</label>
                   </li>
                 </ul>
@@ -129,10 +131,10 @@
               </fieldset>
               <fieldset class="filter-form-fieldsets filter-form-buttons">
                 <legend class="visually-hidden">Кнопки</legend>
-                <button class="button filter-submit-button" type="submit">
+                <button class="button button-blue filter-submit-button" type="submit">
                   Применить
                 </button>
-                <button class="button filter-reset-button" type="reset">
+                <button class="button button-transparent filter-reset-button" type="reset">
                   Сбросить
                 </button>
               </fieldset>
@@ -186,10 +188,10 @@
               </a>
               <p class="hotel-card-type">Гостиница</p>
               <p class="hotel-card-price">От 4000 ₽</p>
-              <a href="#" class="button hotel-card-link-details">
+              <a href="#" class="button button-brown hotel-card-link-details">
                 подробнее
               </a>
-              <button class="button hotel-card-favourite" type="button">
+              <button class="button button-blue hotel-card-favourite" type="button">
                 в избранное
               </button>
               <span class="hotel-rating-stars four-stars" role="img" aria-label="4 звезды"></span>
@@ -205,10 +207,10 @@
               </a>
               <p class="hotel-card-type">Гостиница</p>
               <p class="hotel-card-price">От 5000 ₽</p>
-              <a href="#" class="button hotel-card-link-details">
+              <a href="#" class="button button-brown hotel-card-link-details">
                 подробнее
               </a>
-              <button class="button hotel-card-favourite added" type="button">
+              <button class="button button-green hotel-card-favourite added" type="button">
                 в избранном
               </button>
               <span class="hotel-rating-stars four-stars" role="img" aria-label="4 звезды"></span>
@@ -224,10 +226,10 @@
               </a>
               <p class="hotel-card-type">Гостиница</p>
               <p class="hotel-card-price">От 2500 ₽</p>
-              <a href="#" class="button hotel-card-link-details">
+              <a href="#" class="button button-brown hotel-card-link-details">
                 подробнее
               </a>
-              <button class="button hotel-card-favourite" type="button">
+              <button class="button button-blue hotel-card-favourite" type="button">
                 в избранное
               </button>
               <span class="hotel-rating-stars three-stars" role="img" aria-label="3 звезды"></span>
@@ -243,10 +245,10 @@
               </a>
               <p class="hotel-card-type">Гостиница</p>
               <p class="hotel-card-price">От 1500 ₽</p>
-              <a href="#" class="button hotel-card-link-details">
+              <a href="#" class="button button-brown hotel-card-link-details">
                 подробнее
               </a>
-              <button class="button hotel-card-favourite" type="button">
+              <button class="button button-blue hotel-card-favourite" type="button">
                 в избранное
               </button>
               <span class="hotel-rating-stars two-stars" role="img" aria-label="2 звезды"></span>
@@ -281,7 +283,7 @@
         <form class="subscribe-form" action="http://echo.htmlacademy.ru" method="post">
           <input class="subscribe-form-input" type="email" name="subscribe-user-email" placeholder="Ваш e-mail"
             required>
-          <button class="button subscribe-form-button-submit" type="submit">Подписаться</button>
+          <button class="button button-blue subscribe-form-button-submit" type="submit">Подписаться</button>
         </form>
       </article>
       <footer class="catalog-page-footer">

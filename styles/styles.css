@@ -50,16 +50,25 @@
   --text-basic: #000000;
   --text-second: #333333;
   --text-background: #FFFFFF;
-  --text-background-small: #FFFFFF;
+  --text-background-small: rgba(255, 255, 255, 0.3);
   --text-error: #FF5757;
+  --text-hover: #756167;
+	--text-active: rgba(117, 97, 87, 0.3);
+	--text-background-hover: rgba(255, 255, 255, 0.6);
+	--text-background-active: rgba(255, 255, 255, 0.3);
 
   /* Цвета для кнопок */
   --button-basic: #756157;
   --button-second: #82B3D3;
   --button-select: #7DB54F;
+	--button-disabled: #e5e5e5;
+	--button-brown-hover: #615048;
+	--button-blue-hover: #68a2ca;
+	--button-green-hover: #6c9e42;
 
   /* Цвета для фона */
   --background-basic: #FFFFFF;
+	--background-basic-2: rgba(0, 0, 0, 0.3);
   --background-primary: #82B3D3;
   --background-second-1: rgba(131, 179, 211, 0.12);
   --background-second-2: rgba(131, 179, 211, 0.2);
@@ -69,6 +78,10 @@
   --icon-basic: #000000;
   --icon-second: #83B3D3;
   --icon-text: #7DB54F;
+  --icon-hover: #756157;
+	--icon-active: rgba(117, 97, 87, 0.3);
+	--icon-second-hover: #68A2CA;
+	--icon-second-active: rgba(104, 162, 202, 0.3);
 
   /* Цвета для форм */
   --form-input: #3F5E72;
@@ -123,6 +136,89 @@ body {
   min-width: 140px;
   appearance: none;
   box-sizing: border-box;
+}
+
+.button-brown {
+  background-color: var(--button-basic);
+}
+
+.button-brown:hover {
+  background-color: var(--button-brown-hover);
+}
+
+.button-brown:focus {
+  background-color: var(--button-brown-hover);
+}
+
+.button-brown:active {
+  background-color: var(--button-basic);
+  color: var(--text-background-small);
+}
+
+.button-brown:disabled {
+  color: var(--button-disabled);
+}
+
+.button-blue {
+  background-color: var(--button-second);
+}
+
+.button-blue:hover {
+  background-color: var(--button-blue-hover);
+}
+
+.button-blue:focus {
+  background-color: var(--button-blue-hover);
+}
+
+.button-blue:active {
+  background-color: var(--button-second);
+  color: var(--text-background-small);
+}
+
+.button-blue:disabled {
+  background-color: var(--button-disabled);
+}
+
+.button-green {
+  background-color: var(--button-select);
+}
+
+.button-green:hover {
+  background-color: var(--button-green-hover);
+}
+
+.button-green:focus {
+  background-color: var(--button-green-hover);
+}
+
+.button-green:active {
+  background-color: var(--button-select);
+  color: var(--text-background-small);
+}
+
+.button-green:disabled {
+  background-color: var(--button-disabled);
+}
+
+.button-transparent {
+  background-color: transparent;
+}
+
+.button-transparent:hover {
+  opacity: 0.6;
+}
+
+.button-transparent:focus {
+  border: 3px solid #83B3D3;
+}
+
+.button-transparent:active {
+  color: var(--text-background-small);
+}
+
+.button-transparent:disabled {
+  opacity: 0.1;
 }
 
 .page-container {
@@ -257,7 +353,6 @@ body {
 
 .user-menu-order {
   min-width: 160px;
-  background-color: #756157;
   padding: 8px;
   margin-top: 14px;
   margin-bottom: auto;
@@ -521,7 +616,6 @@ body {
 
 .hotel-search-button {
   width: 376px;
-  background-color: var(--button-basic);
   font-size: 20px;
   line-height: 36px;
   text-decoration: none;
@@ -635,6 +729,9 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 /* Блок Инфраструктура */
@@ -643,9 +740,42 @@ body {
   min-width: 150px;
 }
 
-.filter-form-infra-item:not(last-child) {
-  margin-bottom: 16px;
+.filter-form-infra-item {
+  display: flex;
+  gap: 16px;
 }
+
+.filter-form-infra-pool {
+  appearance: none;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: var(--background-basic);
+}
+
+.filter-form-infra-pool:checked {
+  background-image: url("../images/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filter-form-infra-pool:focus {
+  outline: 3px solid var(--icon-second);
+}
+
+.filter-form-infra-pool:hover,
+.filter-form-infra-pool:hover + label
+{
+  opacity: 0.6;
+}
+
+.filter-form-infra-pool:active,
+.filter-form-infra-pool:active + label
+{
+  opacity: 0.3;
+}
+
 
 /* Блок Тип жилья */
 
@@ -653,9 +783,42 @@ body {
   min-width: 150px;
 }
 
-.filter-form-housing-item:not(last-child) {
-  margin-bottom: 16px;
+.filter-form-housing-item {
+  display: flex;
+  gap: 16px;
 }
+
+.filter-form-housing-type {
+  appearance: none;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: var(--background-basic);
+}
+
+.filter-form-housing-type:checked {
+  background-image: url("../images/tick-radio.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filter-form-housing-type:focus {
+  outline: 3px solid var(--icon-second);
+}
+
+.filter-form-housing-type:hover,
+.filter-form-housing-type:hover + label
+{
+  opacity: 0.6;
+}
+
+.filter-form-housing-type:active,
+.filter-form-housing-type:active + label
+{
+  opacity: 0.3;
+}
+
 
 /* Блок Стоимость */
 
@@ -732,7 +895,6 @@ body {
 }
 
 .filter-reset-button {
-  background-color: transparent;
   padding: 8px 57.5px;
 }
 
@@ -774,6 +936,7 @@ body {
   width: 292px;
   box-sizing: border-box;
   margin-left: auto;
+  appearance: none;
 }
 
 .mode-view-list {
@@ -887,7 +1050,6 @@ body {
 }
 
 .hotel-card-link-details {
-  background-color: var(--button-basic);
   text-decoration: none;
   padding: 8px 26px;
 }
@@ -897,7 +1059,6 @@ body {
 }
 
 .hotel-card-favourite.added {
-  background-color: #7DB54F;
   padding: 8px 17px;
 }
 
@@ -1107,6 +1268,20 @@ body {
   -webkit-mask-image: url("../images/social/youtube.svg");
 }
 
+.social-link:hover::before {
+  background-color: var(--icon-second-hover);
+}
+
+.social-link:focus::before {
+  background-color: var(--icon-second-hover);
+}
+
+.social-link:active::before {
+  background-color: var(--icon-second-active);
+}
+
+
+
 /* Стили для блока контактный телефон */
 
 .contact-phone-link {
@@ -1116,6 +1291,20 @@ body {
   font-size: 40px;
   line-height: 40px;
 }
+
+.contact-phone-link:hover {
+  color: var(--text-hover);
+}
+
+.contact-phone-link:focus {
+  color: var(--text-hover);
+}
+
+.contact-phone-link:active {
+  color: var(--text-active);
+}
+
+
 
 /* Стили для блока партнёрской ссылки */
 
@@ -1141,6 +1330,20 @@ body {
   -webkit-mask-position: center;
   background-color: var(--icon-basic);
 }
+
+.creator-link:hover::before {
+  background-color: var(--icon-hover);
+}
+
+.creator-link:focus::before {
+  background-color: var(--icon-hover);
+}
+
+.creator-link:active::before {
+  background-color: var(--icon-active);
+}
+
+
 
 .visually-hidden {
   clip-path: inset(50%);
