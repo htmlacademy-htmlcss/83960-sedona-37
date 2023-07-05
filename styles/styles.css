@@ -831,14 +831,27 @@ body {
 .filter-form-cost-min
 {
   box-sizing: border-box;
+  appearance: none;
+  border: none;
   width: 143px;
   position: relative;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: var(--text-basic);
+  background-color: var(--background-body);
   padding: 12px 25px 12px 20px;
+  -moz-appearance: textfield;
 }
+
+.filter-form-cost-min {
+  border-radius: 4px 0 0 4px;
+}
+
+.filter-form-cost-max {
+  border-radius: 0 4px 4px 0;
+}
+
 
 .filter-form-cost-max::-webkit-inner-spin-button,
 .filter-form-cost-max::-webkit-outer-spin-button,
@@ -849,15 +862,21 @@ body {
   -webkit-appearance: none;
 }
 
-.filter-form-cost-max,
-.filter-form-cost-min,
-.filter-form-cost-max:hover,
-.filter-form-cost-min:hover,
 .filter-form-cost-max:focus,
 .filter-form-cost-min:focus
 {
   appearance: none;
   -moz-appearance: textfield;
+  background-color: #E6E6E6;
+  outline: 3px solid var(--icon-second);
+}
+
+.filter-form-cost-max:hover,
+.filter-form-cost-min:hover
+{
+  appearance: none;
+  -moz-appearance: textfield;
+  background-color: #E6E6E6;
 }
 
 .filter-form-cost label {
