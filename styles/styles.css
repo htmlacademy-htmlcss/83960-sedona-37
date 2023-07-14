@@ -61,10 +61,10 @@
   --button-basic: #756157;
   --button-second: #82B3D3;
   --button-select: #7DB54F;
-	--button-disabled: #e5e5e5;
+	--button-disabled: #E5E5E5;
 	--button-brown-hover: #615048;
-	--button-blue-hover: #68a2ca;
-	--button-green-hover: #6c9e42;
+	--button-blue-hover: #68A2CA;
+	--button-green-hover: #6C9E42;
 
   /* Цвета для фона */
   --background-basic: #FFFFFF;
@@ -259,6 +259,14 @@ body {
   min-width: 140px;
 }
 
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo:active {
+  opacity: 0.6;
+}
+
 .site-navigation-list,
 .user-menu-list
 {
@@ -298,6 +306,20 @@ body {
   position: absolute;
   bottom: -1px;
 }
+
+.site-navigation-link:focus {
+  color: var(--text-hover);
+}
+
+.site-navigation-link:hover {
+  color: var(--text-hover);
+}
+
+.site-navigation-link:active {
+  color: var(--text-active);
+}
+
+
 
 .user-menu-list {
   max-width: 160px;
@@ -350,6 +372,20 @@ body {
   top: 20%;
   left: 55%;
 }
+
+.user-menu-link:focus::before {
+  background-color: var(--icon-hover);
+}
+
+.user-menu-link:hover::before {
+  background-color: var(--icon-hover);
+}
+
+.user-menu-link:active::before {
+  background-color: var(--icon-active);
+}
+
+
 
 .user-menu-order {
   min-width: 160px;
@@ -700,6 +736,22 @@ body {
   mask-position: center;
 }
 
+.breadcrumbs-link-home:hover::before {
+  background-color: var(--text-background-hover);
+}
+
+.breadcrumbs-link-home:active::before {
+  background-color: var(--text-background-active);
+}
+
+.breadcrumbs-link:hover {
+  color: var(--text-background-hover);
+}
+
+.breadcrumbs-link:active {
+  color: var(--text-background-active);
+}
+
 
 /* Стили для раздела фильтров */
 
@@ -948,7 +1000,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: var(--text-second);
-  padding: 14px 50px 14px 20px;
+  padding: 14px 30px 14px 20px;
   border: 2px solid var(--form-elements-1);
   border-radius: 4px;
   background-color: var(--background-basic);
@@ -956,7 +1008,24 @@ body {
   box-sizing: border-box;
   margin-left: auto;
   appearance: none;
+  background-image: url("../images/select.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
 }
+
+.select-sort-type:focus {
+  outline: 2px solid var(--button-blue-hover);
+}
+
+.select-sort-type:hover {
+  outline: 2px solid var(--button-blue-hover);
+}
+
+.select-sort-type:disabled {
+  border: 2px solid var(--background-basic-2);
+  opacity: 0.3;
+}
+
 
 .mode-view-list {
   margin: 0;
@@ -1211,16 +1280,34 @@ body {
   width: 412px;
   padding: 14px 20px;
   font-family: "PT Sans";
-  font-weight: 400;
+  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   border: none;
   background-color: var(--form-elements-2);
+  border-radius: 4px 0 0 4px;
+}
+
+.subscribe-form-input::placeholder {
+  font-weight: 400;
+  color: var(--text-basic);
+  opacity: 0.6;
+}
+
+.subscribe-form-input:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+  outline-offset: -3px;
+}
+
+.subscribe-form-input:hover {
+  background-color: #E6E6E6;
 }
 
 .subscribe-form-button-submit {
   font-size: 20px;
   line-height: 36px;
+  border-radius: 0 4px 4px 0;
 }
 
 .catalog-subscribe .subscribe-title {

@@ -10,7 +10,7 @@
 
   <body>
     <div class="page-container">
-      <header class="main-page-header">
+      <header class="main-page-header" data-test="header">
         <a class="logo" href="index.html" aria-current="page">
           <img class="logo-image" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона">
         </a>
@@ -54,13 +54,13 @@
           </button>
         </nav>
       </header>
-      <main class="main-index">
-        <section class="hero">
+      <main class="main-index" data-test="main">
+        <section class="hero" data-test="'hero">
           <h1 class="visually-hidden">Преимущества отдыха в Седоне</h1>
           <img class="hero-image" src="images/welcome.svg" width="458" height="352"
             alt="Надпись Добро пожаловать в Седону на фоне горного пейзажа">
         </section>
-        <section class="advantages">
+        <section class="advantages" data-test="advantages">
           <h2 class="visually-hidden">Список преимуществ Седоны</h2>
           <div class="slogan">
             <p class="slogan-title">
@@ -101,7 +101,7 @@
             </li>
           </ul>
         </section>
-        <section class="services">
+        <section class="services" data-test="services">
           <div class="services-intro-wrapper">
             <h2 class="visually-hidden">
               Услуги, оказываемые в Седоне
@@ -126,7 +126,7 @@
             </li>
           </ul>
         </section>
-        <section class="hotel-search">
+        <section class="hotel-search" data-test="search">
           <h2 class="visually-hidden">Лучшие предложения гостиниц в Седоне</h2>
           <p class="hotel-search-title">
             Заинтересовались?
@@ -139,7 +139,7 @@
           </a>
         </section>
       </main>
-      <article class="subscribe index-subscribe">
+      <article class="subscribe index-subscribe" data-test="subscribe">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-content">Только полезная информация и никакого спама, <span>честное бойскаутское!</span></p>
         <form class="subscribe-form" action="http://echo.htmlacademy.ru" method="post">
@@ -148,7 +148,7 @@
           <button class="button button-blue subscribe-form-button-submit" type="submit">Подписаться</button>
         </form>
       </article>
-      <footer class="main-page-footer">
+      <footer class="main-page-footer" data-test="footer">
         <section class="social">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="social-list">
