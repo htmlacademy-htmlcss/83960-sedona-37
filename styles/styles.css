@@ -1014,11 +1014,11 @@ body {
 }
 
 .select-sort-type:focus {
-  outline: 2px solid var(--button-blue-hover);
+  border-color: var(--button-blue-hover);
 }
 
 .select-sort-type:hover {
-  outline: 2px solid var(--button-blue-hover);
+  border-color: var(--button-blue-hover);
 }
 
 .select-sort-type:disabled {
@@ -1044,7 +1044,15 @@ body {
   border-radius: 4px;
 }
 
-.mode-show-grid {
+.mode-view-link:focus {
+  border-color: var(--icon-second-hover);
+}
+
+.mode-view-link:hover {
+  border-color: var(--icon-basic);
+}
+
+.mode-view-link:active {
   border-color: var(--icon-basic);
 }
 
@@ -1103,6 +1111,14 @@ body {
   grid-column: 1 / -1;
 }
 
+.hotel-card-link-image:hover {
+  opacity: 0.8;
+}
+
+.hotel-card-link-image:active {
+  opacity: 0.6;
+}
+
 .hotel-card-image {
   display: block;
   width: 300px;
@@ -1118,6 +1134,20 @@ body {
   text-decoration: none;
   grid-column: 1 / -1;
 }
+
+.hotel-card-link-title:focus {
+  color: var(--text-hover);
+}
+
+.hotel-card-link-title:hover {
+  color: var(--text-hover);
+}
+
+.hotel-card-link-title:active {
+  color: var(--text-active);
+}
+
+
 
 .hotel-card-title {
   margin: 0;
@@ -1209,7 +1239,7 @@ body {
 
 .pagination-link {
   display: block;
-  background-color: var(--background-primary);
+  background-color: var(--button-second);
   border-radius: 4px;
   color: var(--text-background);
   padding: 12px 18px;
@@ -1222,9 +1252,42 @@ body {
   text-align: center;
 }
 
+.pagination-link:focus {
+  outline: 1px solid var(--button-second);
+  background-color: var(--button-blue-hover);
+}
+
+.pagination-link:hover {
+  outline: 1px solid var(--button-second);
+  background-color: var(--button-blue-hover);
+}
+
+.pagination-link:active {
+  background-color: var(--button-second);
+  color: var(--text-background-small);
+}
+
 .pagination-current {
   background-color: var(--background-body);
   color: var(--text-basic);
+}
+
+.pagination-current:focus {
+  background-color: var(--form-elements-2);
+  color: var(--text-basic);
+  outline: none;
+}
+
+.pagination-current:hover {
+  background-color: var(--form-elements-2);
+  color: var(--text-basic);
+  outline: none;
+}
+
+.pagination-current:active {
+  color: var(--text-basic);
+  outline: none;
+  background-color: var(--form-elements-2);
 }
 
 .pagination-more {
@@ -1235,6 +1298,25 @@ body {
   background-color: var(--background-basic);
   padding: 17px 18px;
 }
+
+.pagination-more:focus {
+  background-color: var(--background-basic);
+  color: var(--text-basic);
+  outline: none;
+}
+
+.pagination-more:hover {
+  background-color: var(--background-basic);
+  color: var(--text-basic);
+  outline: none;
+}
+
+.pagination-more:active {
+  background-color: var(--background-basic);
+  color: var(--text-basic);
+  outline: none;
+}
+
 
 
 /* Завершение стилей для catalog.html */
@@ -1271,13 +1353,16 @@ body {
 
 .subscribe-form {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
+  max-width: 684px;
+  margin: 0 auto;
 }
 
 .subscribe-form-input {
   margin: 0;
-  width: 412px;
+  /* width: 412px; */
+  width: 100%;
   padding: 14px 20px;
   font-family: "PT Sans";
   font-weight: 700;
@@ -1308,6 +1393,7 @@ body {
   font-size: 20px;
   line-height: 36px;
   border-radius: 0 4px 4px 0;
+  width: auto;
 }
 
 .catalog-subscribe .subscribe-title {
@@ -1317,6 +1403,7 @@ body {
 .index-subscribe {
   background-image: url(../images/subscribe-background.jpg);
   color: var(--text-background);
+  background-color: #626B80;
 }
 
 /* Стили для футера страницы */
