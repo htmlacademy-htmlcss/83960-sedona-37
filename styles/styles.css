@@ -210,7 +210,7 @@ body {
 }
 
 .button-transparent:focus {
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
 }
 
 .button-transparent:active {
@@ -228,6 +228,7 @@ body {
   background-color: var(--background-basic);
   display: flex;
   flex-direction: column;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* Стили для хедера страницы */
@@ -423,7 +424,7 @@ body {
 /* Стили для блока advantages */
 
 .slogan {
-  padding: 69px 70px;
+  padding: 69px 70px 90px 70px;
 }
 
 .slogan-title {
@@ -875,8 +876,63 @@ body {
 /* Блок Стоимость */
 
 .filter-form-cost {
-  min-width: 288px;
+  width: 288px;
   margin-left: auto;
+}
+
+.range-inputs-wrapper {
+  display: flex;
+  gap: 2px;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: var(--text-background-active);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  width: 226px;
+  background-color: var(--background-basic);
+}
+
+.button-range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  padding: 0;
+  background-color: var(--background-basic);
+  cursor: pointer;
+}
+
+.button-range-toggle:focus {
+  border-color: var(--icon-second);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.button-range-toggle:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.button-range-toggle:active {
+  border-width: 2px;
+  border-color: var(--icon-second);
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+.button-toggle-max {
+  top: -8px;
+  left: 216px;
+}
+
+.button-toggle-min {
+  top: -8px;
 }
 
 .filter-form-cost-max,
@@ -1093,6 +1149,7 @@ body {
   gap: 20px;
   padding-bottom: 40px;
   border-bottom: 1px solid #E6E6E6;
+  align-items: start;
 }
 
 .hotel-card {
@@ -1101,7 +1158,7 @@ body {
   padding: 20px 20px 28px 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+  align-items: start;
   row-gap: 16px;
   column-gap: 20px;
 }
@@ -1248,6 +1305,7 @@ body {
   line-height: 36px;
   text-decoration: none;
   min-width: 60px;
+  height: 60px;
   box-sizing: border-box;
   text-align: center;
 }
@@ -1393,7 +1451,8 @@ body {
   font-size: 20px;
   line-height: 36px;
   border-radius: 0 4px 4px 0;
-  width: auto;
+  width: 232px;
+  flex-shrink: 0;
 }
 
 .catalog-subscribe .subscribe-title {
@@ -1536,6 +1595,7 @@ body {
   background-color: var(--icon-active);
 }
 
+/* Стили для модального окна */
 
 
 .visually-hidden {

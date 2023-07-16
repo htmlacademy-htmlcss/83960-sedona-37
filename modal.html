@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>HTML Academy: Седона</title>
+  </head>
+
+  <body>
+    <dialog class="modal-dialog" id="modal-dialog">
+      <h2 class="modal-title">
+        Поиск гостиницы в Седоне
+      </h2>
+      <form action="dialog" class="modal-dialog-form">
+        <label class="modal-form-label check-in-date-label" for="check-in-date">
+          Дата заезда
+          <input type="text" class="check-in-date" id="check-in-date" name="check-in-date">
+          <p class="label-text label-text-error" value="27 апреля 2020">
+            Мы не можем отправить вас в прошлое.
+          </p>
+        </label>
+        <label class="modal-form-label check-out-date-label" for="check-out-date">
+          Дата выезда
+          <input type="text" class="check-out-date" id="check-out-date" name="check-out-date">
+          <p class="label-text label-text-error" value="27 апреля 2020">
+            На эти даты есть свободные номера. Пока есть.
+          </p>
+        </label>
+        <label class="modal-form-label adults-count-label" for="adults-count-input">
+          Взрослые:
+          <button class="adults-count-button-plus">+</button>
+          <input type="text" class="adults-count-input" id="adults-count-input" name="adults-count-input">
+          <p class="label-text label-text-error" value="27 апреля 2020">
+            На эти даты есть свободные номера. Пока есть.
+          </p>
+        </label>
+
+      </form>
+    </dialog>
+    <script>
+      var dialog = document.getElementById("modal-dialog");
+      dialog.showModal();
+    </script>
+  </body>
+</html>
