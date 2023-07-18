@@ -49,7 +49,7 @@
               </a>
             </li>
           </ul>
-          <button class="button button-brown user-menu-order" type="button">
+          <button class="button button-brown user-menu-order" type="button" onclick="modaldialog.showModal()">
             Хочу сюда!
           </button>
         </nav>
@@ -184,6 +184,75 @@
           <a class="creator-link" href="https://htmlacademy.ru"></a>
         </section>
       </footer>
+
+      <!-- Модальное окно -->
+
+      <dialog class="modal-dialog" id="modaldialog">
+        <div class="modal-header">
+          <h2 class="modal-title">
+            Поиск гостиницы в Седоне
+          </h2>
+          <button class="modal-button-close" type="button" onclick="modaldialog.close()">
+            <span class="visually-hidden">Закрыть диалог</span>
+          </button>
+        </div>
+        <form class="modal-dialog-form" action="http://echo.htmlacademy.ru" method="post">
+          <label class="modal-form-label date-label check-in-date-label" for="check-in-date">
+            Дата заезда
+            <input type="text" class="input-date check-in-date" id="check-in-date" name="check-in-date"
+              value="27 апреля 2020" placeholder="Укажите дату" autofocus>
+          </label>
+          <p class="label-text label-text-error">
+            Мы не можем отправить вас в прошлое.
+          </p>
+          <label class="modal-form-label date-label check-out-date-label" for="check-out-date">
+            Дата выезда
+            <input type="text" class="input-date check-out-date" id="check-out-date" name="check-out-date"
+              value="1 сентября 2021" placeholder="Укажите дату">
+          </label>
+          <p class="label-text">
+            На эти даты есть свободные номера. Пока есть.
+          </p>
+          <label class="modal-form-label count-label adults-count-label" for="adults-count-input">
+            Взрослые:
+            <button class="button count-button adults-count-button-minus" type="button">
+              <span class="visually-hidden">Уменьшить количество взрослых</span>
+              <p class="count-button-sign">&mdash;</p>
+            </button>
+            <input type="text" class="input-count adults-count-input" id="adults-count-input" name="adults-count-input"
+              value="2">
+            <button class="button count-button adults-count-button-plus" type="button">
+              <span class="visually-hidden">Увеличить количество взрослых</span>
+              <p class="count-button-sign">+</p>
+            </button>
+          </label>
+          <label class="modal-form-label count-label children-count-label" for="children-count-input">
+            Дети:
+            <span class="tooltip">
+              <button class="button count-button children-count-button-info" type="button">
+                <span class="visually-hidden">Дополнительная информация</span>
+              </button>
+              <span class="tooltip-text">
+                Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
+                Дети до 6 лет размещаются бесплатно.
+              </span>
+            </span>
+            <button class="button count-button children-count-button-minus" type="button">
+              <span class="visually-hidden">Уменьшить количество детей</span>
+              <p class="count-button-sign">&mdash;</p>
+            </button>
+            <input type="text" class="input-count children-count-input" id="children-count-input" name="children-count-input"
+              value="2">
+            <button class="button count-button children-count-button-plus" type="button">
+              <span class="visually-hidden">Увеличить количество детей</span>
+              <p class="count-button-sign">+</p>
+            </button>
+          </label>
+          <button class="button button-blue modal-button-submit" type="submit">
+            Найти
+          </button>
+        </form>
+      </dialog>
     </div>
   </body>
 
