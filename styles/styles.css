@@ -46,6 +46,9 @@
   --fav-count: "12";
   --link-padding: 16px;
 
+  /* Пользовательские свойства шрифтов */
+  --font-family: "PT Sans", sans-serif;
+
   /* Цвета для текста */
   --text-basic: #000000;
   --text-second: #333333;
@@ -1596,6 +1599,289 @@ body {
 }
 
 /* Стили для модального окна */
+
+.modal-dialog {
+  border-radius: 30px;
+  width: 717px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+  background-color: var(--background-basic);
+  border: none;
+  padding: 64px 70px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  color: var(--text-basic);
+  box-sizing: border-box;
+  overflow: initial;
+  /* margin: 0; */
+}
+
+.modal-dialog-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 83px;
+}
+
+.modal-header {
+  margin-bottom: 64px;
+  display: flex;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.modal-button-close {
+  box-sizing: border-box;
+  width: 52px;
+  height: 52px;
+  background-color: var(--background-body);
+  border: none;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: -19px;
+  background-image: url("../images/modal/cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-button-close:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid var(--icon-second);
+}
+
+.modal-button-close:active {
+  background-color: #E6E6E6;
+  opacity: 0.3;
+  outline: none;
+}
+
+
+.modal-button-close:hover {
+  background-color: #E6E6E6;
+}
+
+
+.modal-form-label {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: var(--text-basic);
+  display: flex;
+}
+
+.date-label {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.input-date {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 12px 50px 12px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--form-elements-2);
+  background-image: url("../images/modal/date.svg");
+  background-repeat: no-repeat;
+  background-position: center right 20px;
+  width: 440px;
+  box-sizing: border-box;
+}
+
+.input-date::placeholder {
+  color: rgba(0, 0, 0, 0.6)
+}
+
+.input-date:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid var(--icon-second);
+}
+
+.input-date:hover {
+  background-color: #E6E6E6;
+}
+
+.input-date:disabled {
+  opacity: 0.3;
+}
+
+
+.label-text {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--text-second);
+  grid-column: 1 / -1;
+  margin-left: 157px;
+  margin-bottom: 23px;
+}
+
+.label-text-error {
+  color: var(--text-error);
+}
+
+.count-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.count-button {
+  min-width: 40px;
+  padding: 14px 10px;
+  background-color: var(--background-body);
+  color: var(--text-active);
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.count-button-sign {
+  margin: 0;
+  width: 20px;
+  right: 20px;
+  border-radius: 4px;
+}
+
+.count-button:focus .count-button-sign {
+  outline: 3px solid var(--icon-second);
+  color: var(--text-basic);
+}
+
+.count-button:hover .count-button-sign {
+  color: var(--text-basic);
+}
+
+.count-button:active .count-button-sign {
+  outline: none;
+  color: var(--text-basic);
+  opacity: 0.2;
+}
+
+.input-count {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--text-basic);
+  width: 31px;
+  background-color: var(--background-body);
+  padding: 14px 5px;
+  box-sizing: border-box;
+  border: none;
+}
+
+.input-count::placeholder {
+  color: rgba(0, 0, 0, 0.6)
+}
+
+.input-count:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid var(--icon-second);
+  z-index: 1;
+}
+
+.input-count:hover {
+  background-color: #E6E6E6;
+}
+
+.input-date:disabled {
+  opacity: 0.3;
+}
+
+
+.adults-count-button-minus {
+  margin-left: auto;
+  border-radius: 4px 0 0 4px;
+  font-size: 24px;
+}
+
+.adults-count-button-plus {
+  border-radius: 0 4px 4px 0;
+}
+
+.children-count-button-minus {
+  margin-left: auto;
+  border-radius: 4px 0 0 4px;
+  font-size: 24px;
+}
+
+.children-count-button-plus {
+  border-radius: 0 4px 4px 0;
+}
+
+.children-count-button-info {
+  min-width: 26px;
+  height: 26px;
+  border-radius: 100%;
+  background-color: var(--icon-second);
+  padding: 0;
+  background-image: url("../images/modal/info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tooltip {
+  position: relative;
+  margin-left: 5px;
+}
+
+.tooltip-text {
+  position: absolute;
+  display: none;
+  color: var(--text-background);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: none;
+  width: 256px;
+  box-sizing: border-box;
+  padding: 15px 18px 18px 22px;
+  border-radius: 10px;
+  background-color: var(--text-second);
+  box-shadow: 0 15px 30px 0 var(--background-basic-2);
+  top: 42px;
+  left: 65%;
+  transform: translateX(-50%);
+}
+
+.tooltip-text::before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  left: 50%;
+  border-bottom: 10px solid var(--text-second);
+  top: 0;
+  transform: translateX(-50%) translateY(-100%);
+}
+
+.children-count-button-info:hover + .tooltip-text {
+  display: block;
+}
+
+.modal-button-submit {
+  grid-column: 1 / -1;
+  padding: 15px 77px;
+}
+
 
 
 .visually-hidden {
