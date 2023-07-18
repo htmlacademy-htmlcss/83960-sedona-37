@@ -373,8 +373,8 @@ body {
   padding-top: 5px;
   padding-bottom: 5px;
   position: absolute;
-  top: 20%;
-  left: 55%;
+  top: 17%;
+  left: 44%;
 }
 
 .user-menu-link:focus::before {
@@ -581,7 +581,7 @@ body {
   min-height: 75px;
   content: "";
   background-color: var(--icon-second);
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   mask-repeat: no-repeat;
   mask-position: center;
   -webkit-mask-repeat: no-repeat;
@@ -777,6 +777,8 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  text-transform: capitalize;
+  padding: 0;
 }
 
 .filter-form-lists {
@@ -803,6 +805,7 @@ body {
 
 .filter-form-infra-pool {
   appearance: none;
+  margin: 0;
   display: block;
   width: 20px;
   height: 20px;
@@ -847,6 +850,7 @@ body {
 .filter-form-housing-type {
   appearance: none;
   display: block;
+  margin: 0;
   width: 20px;
   height: 20px;
   border-radius: 20px;
@@ -931,7 +935,7 @@ body {
 
 .button-toggle-max {
   top: -8px;
-  left: 216px;
+  left: 207px;
 }
 
 .button-toggle-min {
@@ -1000,7 +1004,7 @@ body {
 
 .filter-form-cost label span {
   position: absolute;
-  right: 10px;
+  right: 19px;
   top: 50%;
   transform: translateY(-50%);
   opacity: 0.3;
@@ -1041,7 +1045,6 @@ body {
   padding-bottom: 40px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -1056,20 +1059,21 @@ body {
 }
 
 .select-sort-type {
+  font-family: var(--font-family);
   font-size: 18px;
   line-height: 21px;
   color: var(--text-second);
-  padding: 14px 30px 14px 20px;
+  padding: 12px 30px 12px 18px;
   border: 2px solid var(--form-elements-1);
   border-radius: 4px;
   background-color: var(--background-basic);
   width: 292px;
   box-sizing: border-box;
-  margin-left: auto;
+  margin-left: 181px;
   appearance: none;
   background-image: url("../images/select.svg");
   background-repeat: no-repeat;
-  background-position: right 10px center;
+  background-position: right 17px center;
 }
 
 .select-sort-type:focus {
@@ -1089,12 +1093,13 @@ body {
 .mode-view-list {
   margin: 0;
   padding: 0;
-  width: 230px;
+  width: 209px;
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
   gap: 0 8px;
+  margin-left: auto;
 }
 
 .mode-view-link {
@@ -1118,9 +1123,9 @@ body {
 .mode-view-link::before {
   display: block;
   content: "";
-  width: 24px;
+  width: 20px;
   height: 20px;
-  padding: 14px 12px;
+  padding: 12px 12px;
   background-color: var(--icon-basic);
   mask-repeat: no-repeat;
   mask-position: center;
@@ -1149,7 +1154,8 @@ body {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  column-gap: 18px;
+  row-gap: 17px;
   padding-bottom: 40px;
   border-bottom: 1px solid #E6E6E6;
   align-items: start;
@@ -1158,7 +1164,7 @@ body {
 .hotel-card {
   border: 1px solid #E6E6E6;
   border-radius: 4px;
-  padding: 20px 20px 28px 20px;
+  padding: 20px 20px 20px 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: start;
@@ -1211,6 +1217,8 @@ body {
 
 .hotel-card-title {
   margin: 0;
+  font-size: 24px;
+  line-height: 28px;
 }
 
 .hotel-card-type,
@@ -1286,7 +1294,7 @@ body {
 
 .pagination-list {
   margin: 0;
-  padding: 40px 0 60px 0;
+  padding: 38px 0 60px 0;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -1473,7 +1481,7 @@ body {
 .main-page-footer,
 .catalog-page-footer
 {
-  padding: 40px 70px 30px 70px;
+  padding: 45px 70px 35px 70px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   gap: 20px;
