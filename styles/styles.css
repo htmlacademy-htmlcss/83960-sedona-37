@@ -217,6 +217,7 @@ body {
 }
 
 .button-transparent:active {
+  outline: 0;
   color: var(--text-background-small);
 }
 
@@ -493,6 +494,8 @@ body {
 .advantages-item-image {
   grid-column: 1 / -1;
   display: flex;
+  background-color: var(--background-primary);
+  align-items: flex-start;
 }
 
 .advantages-item-reverse {
@@ -501,14 +504,15 @@ body {
 
 .advantages-item-text {
   color: var(--text-background);
-  background-color: var(--background-primary);
   padding: 102px 85px;
+  width: 230px;
 }
 
 .advantages-image {
-  width: 800px;
+  display: block;
+  max-width: calc(200%/3);
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .advantages-item-inner {
@@ -1187,8 +1191,7 @@ body {
 
 .hotel-card-image {
   display: block;
-  width: 300px;
-  object-fit: cover;
+  object-fit: contain;
   max-width: 100%;
 }
 
@@ -1614,23 +1617,22 @@ body {
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
   background-color: var(--background-basic);
   border: none;
-  padding: 64px 70px;
+  padding: 64px 71px 64px 69px;
   font-family: var(--font-family);
   font-weight: 700;
   color: var(--text-basic);
   box-sizing: border-box;
   overflow: initial;
-  /* margin: 0; */
 }
 
 .modal-dialog-form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 83px;
+  column-gap: 91px;
 }
 
 .modal-header {
-  margin-bottom: 64px;
+  margin-bottom: 48px;
   display: flex;
 }
 
@@ -1649,7 +1651,7 @@ body {
   border: none;
   border-radius: 50%;
   margin-left: auto;
-  margin-right: -19px;
+  margin-right: -17px;
   background-image: url("../images/modal/cross.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -1845,7 +1847,7 @@ body {
 
 .tooltip {
   position: relative;
-  margin-left: 5px;
+  margin-left: 12px;
 }
 
 .tooltip-text {
@@ -1858,12 +1860,12 @@ body {
   text-transform: none;
   width: 256px;
   box-sizing: border-box;
-  padding: 15px 18px 18px 22px;
+  padding: 19px 19px 23px 19px;
   border-radius: 10px;
   background-color: var(--text-second);
   box-shadow: 0 15px 30px 0 var(--background-basic-2);
-  top: 42px;
-  left: 65%;
+  top: 40px;
+  left: 56%;
   transform: translateX(-50%);
 }
 
@@ -1887,7 +1889,10 @@ body {
 
 .modal-button-submit {
   grid-column: 1 / -1;
-  padding: 15px 77px;
+  padding: 17px 77px;
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 10px;
 }
 
 
