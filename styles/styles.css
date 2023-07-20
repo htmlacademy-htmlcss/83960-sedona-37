@@ -1554,7 +1554,7 @@ body {
   display: inline-block;
   height: 100%;
 }
-
+/*
 .creator-link::before {
   width: 115px;
   height: 100%;
@@ -1567,18 +1567,18 @@ body {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   background-color: var(--icon-basic);
+}*/
+
+.creator-link:hover .creator-link-image-path {
+  fill: var(--icon-hover);
 }
 
-.creator-link:hover::before {
-  background-color: var(--icon-hover);
+.creator-link:focus .creator-link-image-path {
+  fill: var(--icon-hover);
 }
 
-.creator-link:focus::before {
-  background-color: var(--icon-hover);
-}
-
-.creator-link:active::before {
-  background-color: var(--icon-active);
+.creator-link:active .creator-link-image-path {
+  fill: var(--icon-active);
 }
 
 /* Стили для модального окна */
