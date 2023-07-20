@@ -1,30 +1,9 @@
 /* Подключение шрифтов */
 
-/* Полужирный курсив */
-@font-face {
-    font-family: "PT Sans";
-    src: url("../fonts/PTSans-BoldItalic.woff2") format("woff2"),
-        url("../fonts/PTSans-BoldItalic.woff") format("woff");
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-/* Обычный курсив */
-@font-face {
-    font-family: "PT Sans";
-    src: url("../fonts/PTSans-Italic.woff2") format("woff2"),
-        url("../fonts/PTSans-Italic.woff") format("woff");
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
 /* Полужирный прямой */
 @font-face {
     font-family: "PT Sans";
-    src: url("../fonts/PTSans-Bold.woff2") format("woff2"),
-        url("../fonts/PTSans-Bold.woff") format("woff");
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -33,8 +12,7 @@
 /* Обычный прямой */
 @font-face {
     font-family: "PT Sans";
-    src: url("../fonts/PTSans-Regular.woff2") format("woff2"),
-        url("../fonts/PTSans-Regular.woff") format("woff");
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -101,7 +79,7 @@ body {
   padding: 0;
   background-color: var(--background-body);
   color: var(--text-second);
-  font-family: "PT Sans", sans-serif;
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -113,7 +91,7 @@ body {
   display: block;
   appearance: none;
   border: none;
-  font-family: "PT Sans";
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -123,7 +101,7 @@ body {
 
 .button{
   display: block;
-  font-family: "PT Sans";
+  font-family: var(--font-family);
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -159,7 +137,7 @@ body {
 }
 
 .button-brown:disabled {
-  color: var(--button-disabled);
+  background-color: var(--button-disabled);
 }
 
 .button-blue {
@@ -955,6 +933,7 @@ body {
 .filter-form-cost-max,
 .filter-form-cost-min
 {
+  font-family: var(--font-family);
   box-sizing: border-box;
   appearance: none;
   border: none;
@@ -1442,10 +1421,9 @@ body {
 
 .subscribe-form-input {
   margin: 0;
-  /* width: 412px; */
   width: 100%;
   padding: 14px 20px;
-  font-family: "PT Sans";
+  font-family: var(--font-family);
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
