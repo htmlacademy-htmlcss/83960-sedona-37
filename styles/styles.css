@@ -1012,7 +1012,7 @@ body {
   color: var(--text-basic);
 }
 
-.filter-form-cost label span {
+.input-inner-text {
   position: absolute;
   right: 19px;
   top: 50%;
@@ -1641,7 +1641,7 @@ body {
 .modal-dialog-form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 91px;
+  column-gap: 45px;
 }
 
 .modal-header {
@@ -1756,64 +1756,65 @@ body {
   color: var(--text-error);
 }
 
-.count-label {
+.input-count-wrapper {
   display: flex;
   align-items: center;
   margin-bottom: 48px;
 }
 
 .count-button {
-  min-width: 40px;
+  position: relative;
+  min-width: 0;
+  width: 40px;
+  height: 48px;
   padding: 14px 10px;
   background-color: var(--background-body);
   color: var(--text-active);
   font-size: 32px;
   font-weight: 400;
-  text-align: center;
-  appearance: none;
 }
 
 .count-button-sign {
-  margin: 0;
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
-  position: relative;
-}
-
-.sign-bar {
-  width: 14px;
-  height: 2px;
-  background-color: var(--text-active);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 14px;
+  height: 20px;
+  padding: 0 3px;
+  border-radius: 4px;
 }
 
-.sign-bar-vertical {
-  width: 2px;
-  height: 14px;
+.count-button:hover .count-button-sign-path {
+  fill-opacity: 1;
+  fill: var(--text-basic);
 }
 
-.count-button:focus .count-button-sign {
+.count-button:focus .count-button-sign
+{
   outline: 3px solid var(--icon-second);
-  color: var(--text-basic);
 }
 
-.count-button:hover .count-button-sign > .sign-bar {
-  background-color: var(--text-basic);
+.count-button:focus .count-button-sign-path
+{
+  fill-opacity: 1;
+  fill: var(--text-basic);
 }
 
-.count-button:active .count-button-sign {
+.count-button:active .count-button-sign
+{
   outline: none;
 }
 
-.count-button:active .count-button-sign > .sign-bar {
-  outline: none;
-  background-color: var(--text-basic);
-  opacity: 0.2;
+.count-button:active .count-button-sign-path
+{
+  fill-opacity: 0.2;
 }
+
+.count-button:disabled {
+  opacity: 0.1;
+}
+
 
 .input-count {
   font-family: var(--font-family);
@@ -1824,7 +1825,7 @@ body {
   color: var(--text-basic);
   width: 31px;
   background-color: var(--background-body);
-  padding: 14px 5px;
+  padding: 14px 10px;
   box-sizing: border-box;
   border: none;
   appearance: none;
@@ -1856,13 +1857,16 @@ body {
 
 
 .adults-count-button-minus {
-  margin-left: auto;
+  margin-left: 47px;
   border-radius: 4px 0 0 4px;
-  font-size: 24px;
 }
 
 .adults-count-button-plus {
   border-radius: 0 4px 4px 0;
+}
+
+.children-count-label {
+  margin-left: 25px;
 }
 
 .children-count-button-minus {
@@ -1876,7 +1880,7 @@ body {
 }
 
 .children-count-button-info {
-  min-width: 26px;
+  width: 26px;
   height: 26px;
   border-radius: 100%;
   background-color: var(--icon-second);
@@ -1906,7 +1910,7 @@ body {
   background-color: var(--text-second);
   box-shadow: 0 15px 30px 0 var(--background-basic-2);
   top: 40px;
-  left: 56%;
+  left: 50%;
   transform: translateX(-50%);
 }
 

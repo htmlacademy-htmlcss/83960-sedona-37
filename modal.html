@@ -51,7 +51,7 @@
               </a>
             </li>
           </ul>
-          <button class="button button-brown user-menu-order" type="button" onclick="modaldialog.showModal()">
+          <button class="button button-brown user-menu-order" type="button" onclick="modaldialog.show()">
             Хочу сюда!
           </button>
         </nav>
@@ -200,7 +200,7 @@
         </div>
         <form class="modal-dialog-form" action="http://echo.htmlacademy.ru" method="post">
           <label class="modal-form-label date-label check-in-date-label" for="check-in-date">
-            Дата заезда
+            Дата заезда:
             <input type="text" class="input-date check-in-date" id="check-in-date" name="check-in-date"
               value="27 апреля 2020" placeholder="Укажите дату" autofocus required>
           </label>
@@ -208,33 +208,36 @@
             Мы не можем отправить вас в прошлое.
           </p>
           <label class="modal-form-label date-label check-out-date-label" for="check-out-date">
-            Дата выезда
+            Дата выезда:
             <input type="text" class="input-date check-out-date" id="check-out-date" name="check-out-date"
               value="1 сентября 2021" placeholder="Укажите дату" required>
           </label>
           <p class="label-text">
             На эти даты есть свободные номера. Пока есть.
           </p>
-          <label class="modal-form-label count-label adults-count-label" for="adults-count-input">
-            Взрослые:
+          <div class="input-count-wrapper">
+            <label class="modal-form-label count-label adults-count-label" for="adults-count-input">
+              Взрослые:
+            </label>
             <button class="button count-button adults-count-button-minus" type="button">
               <span class="visually-hidden">Уменьшить количество взрослых</span>
-              <div class="count-button-sign">
-                <div class="sign-bar"></div>
-              </div>
+              <svg class="count-button-sign count-button-sign-minus" xmlns="http://www.w3.org/2000/svg" width="14" height="2" viewBox="0 0 14 2" fill="none">
+                <path class="count-button-sign-path" d="M0 0L0 2L14 2V0L0 0Z" fill="#756157" fill-opacity="0.3" />
+              </svg>
             </button>
             <input type="number" class="input-count adults-count-input" id="adults-count-input" name="adults-count-input"
               value="2" required>
             <button class="button count-button adults-count-button-plus" type="button">
               <span class="visually-hidden">Увеличить количество взрослых</span>
-              <div class="count-button-sign">
-                <div class="sign-bar"></div>
-                <div class="sign-bar sign-bar-vertical"></div>
-              </div>
+              <svg class="count-button-sign count-button-sign-plus" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path class="count-button-sign-path" d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#756157" fill-opacity="0.3" />
+              </svg>
             </button>
-          </label>
-          <label class="modal-form-label count-label children-count-label" for="children-count-input">
-            Дети:
+          </div>
+          <div class="input-count-wrapper">
+            <label class="modal-form-label count-label children-count-label" for="children-count-input">
+              Дети:
+            </label>
             <span class="tooltip">
               <button class="button count-button children-count-button-info" type="button">
                 <span class="visually-hidden">Дополнительная информация</span>
@@ -246,20 +249,20 @@
             </span>
             <button class="button count-button children-count-button-minus" type="button">
               <span class="visually-hidden">Уменьшить количество детей</span>
-              <div class="count-button-sign">
-                <div class="sign-bar"></div>
-              </div>
+              <svg class="count-button-sign count-button-sign-minus" xmlns="http://www.w3.org/2000/svg" width="14" height="2" viewBox="0 0 14 2" fill="none">
+                <path class="count-button-sign-path" d="M0 0L0 2L14 2V0L0 0Z" fill="#756157" fill-opacity="0.3" />
+              </svg>
             </button>
             <input type="number" class="input-count children-count-input" id="children-count-input" name="children-count-input"
               value="2" required>
             <button class="button count-button children-count-button-plus" type="button">
               <span class="visually-hidden">Увеличить количество детей</span>
-              <div class="count-button-sign">
-                <div class="sign-bar"></div>
-                <div class="sign-bar sign-bar-vertical"></div>
-              </div>
+              <svg class="count-button-sign count-button-sign-plus" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                viewBox="0 0 14 14" fill="none">
+                <path class="count-button-sign-path" d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#756157" fill-opacity="0.3" />
+              </svg>
             </button>
-          </label>
+          </div>
           <button class="button button-blue modal-button-submit" type="submit">
             Найти
           </button>
