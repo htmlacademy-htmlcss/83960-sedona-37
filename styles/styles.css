@@ -1,43 +1,21 @@
 /* Подключение шрифтов */
 
-/* Полужирный курсив */
-@font-face {
-    font-family: "PT Sans";
-    src: url("../fonts/PTSans-BoldItalic.woff2") format("woff2"),
-        url("../fonts/PTSans-BoldItalic.woff") format("woff");
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-/* Обычный курсив */
-@font-face {
-    font-family: "PT Sans";
-    src: url("../fonts/PTSans-Italic.woff2") format("woff2"),
-        url("../fonts/PTSans-Italic.woff") format("woff");
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
 /* Полужирный прямой */
 @font-face {
-    font-family: "PT Sans";
-    src: url("../fonts/PTSans-Bold.woff2") format("woff2"),
-        url("../fonts/PTSans-Bold.woff") format("woff");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* Обычный прямой */
 @font-face {
-    font-family: "PT Sans";
-    src: url("../fonts/PTSans-Regular.woff2") format("woff2"),
-        url("../fonts/PTSans-Regular.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* Начало стилизации */
@@ -56,22 +34,22 @@
   --text-background-small: rgba(255, 255, 255, 0.3);
   --text-error: #FF5757;
   --text-hover: #756167;
-	--text-active: rgba(117, 97, 87, 0.3);
-	--text-background-hover: rgba(255, 255, 255, 0.6);
-	--text-background-active: rgba(255, 255, 255, 0.3);
+  --text-active: rgba(117, 97, 87, 0.3);
+  --text-background-hover: rgba(255, 255, 255, 0.6);
+  --text-background-active: rgba(255, 255, 255, 0.3);
 
   /* Цвета для кнопок */
   --button-basic: #756157;
   --button-second: #82B3D3;
   --button-select: #7DB54F;
-	--button-disabled: #E5E5E5;
-	--button-brown-hover: #615048;
-	--button-blue-hover: #68A2CA;
-	--button-green-hover: #6C9E42;
+  --button-disabled: #E5E5E5;
+  --button-brown-hover: #615048;
+  --button-blue-hover: #68A2CA;
+  --button-green-hover: #6C9E42;
 
   /* Цвета для фона */
   --background-basic: #FFFFFF;
-	--background-basic-2: rgba(0, 0, 0, 0.3);
+  --background-basic-2: rgba(0, 0, 0, 0.3);
   --background-primary: #82B3D3;
   --background-second-1: rgba(131, 179, 211, 0.12);
   --background-second-2: rgba(131, 179, 211, 0.2);
@@ -82,9 +60,9 @@
   --icon-second: #83B3D3;
   --icon-text: #7DB54F;
   --icon-hover: #756157;
-	--icon-active: rgba(117, 97, 87, 0.3);
-	--icon-second-hover: #68A2CA;
-	--icon-second-active: rgba(104, 162, 202, 0.3);
+  --icon-active: rgba(117, 97, 87, 0.3);
+  --icon-second-hover: #68A2CA;
+  --icon-second-active: rgba(104, 162, 202, 0.3);
 
   /* Цвета для форм */
   --form-input: #3F5E72;
@@ -101,7 +79,7 @@ body {
   padding: 0;
   background-color: var(--background-body);
   color: var(--text-second);
-  font-family: "PT Sans", sans-serif;
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -113,7 +91,7 @@ body {
   display: block;
   appearance: none;
   border: none;
-  font-family: "PT Sans";
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -123,7 +101,7 @@ body {
 
 .button{
   display: block;
-  font-family: "PT Sans";
+  font-family: var(--font-family);
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -159,7 +137,7 @@ body {
 }
 
 .button-brown:disabled {
-  color: var(--button-disabled);
+  background-color: var(--button-disabled);
 }
 
 .button-blue {
@@ -238,8 +216,7 @@ body {
 /* Стили для хедера страницы */
 
 .main-page-header,
-.catalog-page-header
-{
+.catalog-page-header {
   padding-left: 70px;
   padding-right: 70px;
   display: flex;
@@ -275,8 +252,7 @@ body {
 }
 
 .site-navigation-list,
-.user-menu-list
-{
+.user-menu-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -308,7 +284,7 @@ body {
   display: block;
   content: "";
   height: 2px;
-  width: calc(100% - var(--link-padding)*2);
+  width: calc(100% - var(--link-padding) * 2);
   background-color: #756257;
   position: absolute;
   bottom: -1px;
@@ -405,8 +381,7 @@ body {
 /* Cтили для index.html */
 
 .main-index,
-.main-catalog
-{
+.main-catalog {
   flex-grow: 1;
 }
 
@@ -516,7 +491,7 @@ body {
 
 .advantages-image {
   display: block;
-  max-width: calc(200%/3);
+  max-width: calc(200% / 3);
   height: auto;
   object-fit: contain;
 }
@@ -681,7 +656,7 @@ body {
 
 .filter-wrapper {
   background-color: #678EB3;
-  background-image: url(../images/filter-form-background.jpg);
+  background-image: url("../images/filter-form-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -834,14 +809,12 @@ body {
 }
 
 .filter-form-infra-pool:hover,
-.filter-form-infra-pool:hover + label
-{
+.filter-form-infra-pool:hover + label {
   opacity: 0.6;
 }
 
 .filter-form-infra-pool:active,
-.filter-form-infra-pool:active + label
-{
+.filter-form-infra-pool:active + label {
   opacity: 0.3;
 }
 
@@ -878,14 +851,12 @@ body {
 }
 
 .filter-form-housing-type:hover,
-.filter-form-housing-type:hover + label
-{
+.filter-form-housing-type:hover + label {
   opacity: 0.6;
 }
 
 .filter-form-housing-type:active,
-.filter-form-housing-type:active + label
-{
+.filter-form-housing-type:active + label {
   opacity: 0.3;
 }
 
@@ -953,8 +924,8 @@ body {
 }
 
 .filter-form-cost-max,
-.filter-form-cost-min
-{
+.filter-form-cost-min {
+  font-family: var(--font-family);
   box-sizing: border-box;
   appearance: none;
   border: none;
@@ -981,15 +952,13 @@ body {
 .filter-form-cost-max::-webkit-inner-spin-button,
 .filter-form-cost-max::-webkit-outer-spin-button,
 .filter-form-cost-min::-webkit-inner-spin-button,
-.filter-form-cost-min::-webkit-outer-spin-button
-{
+.filter-form-cost-min::-webkit-outer-spin-button {
   appearance: none;
   -webkit-appearance: none;
 }
 
 .filter-form-cost-max:focus,
-.filter-form-cost-min:focus
-{
+.filter-form-cost-min:focus {
   appearance: none;
   -moz-appearance: textfield;
   background-color: #E6E6E6;
@@ -997,8 +966,7 @@ body {
 }
 
 .filter-form-cost-max:hover,
-.filter-form-cost-min:hover
-{
+.filter-form-cost-min:hover {
   appearance: none;
   -moz-appearance: textfield;
   background-color: #E6E6E6;
@@ -1012,7 +980,7 @@ body {
   color: var(--text-basic);
 }
 
-.filter-form-cost label span {
+.input-inner-text {
   position: absolute;
   right: 19px;
   top: 50%;
@@ -1234,8 +1202,7 @@ body {
 }
 
 .hotel-card-type,
-.hotel-card-price
-{
+.hotel-card-price {
   margin: 0;
   color: var(--text-second);
   font-weight: 400;
@@ -1434,18 +1401,15 @@ body {
 
 .subscribe-form {
   display: flex;
-  /* flex-wrap: wrap; */
-  /* justify-content: center; */
   max-width: 684px;
   margin: 0 auto;
 }
 
 .subscribe-form-input {
   margin: 0;
-  /* width: 412px; */
   width: 100%;
   padding: 14px 20px;
-  font-family: "PT Sans";
+  font-family: var(--font-family);
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -1480,10 +1444,10 @@ body {
 
 .catalog-subscribe .subscribe-title {
   color: var(--text-basic);
-  }
+}
 
 .index-subscribe {
-  background-image: url(../images/subscribe-background.jpg);
+  background-image: url("../images/subscribe-background.jpg");
   color: var(--text-background);
   background-color: #626B80;
 }
@@ -1491,8 +1455,7 @@ body {
 /* Стили для футера страницы */
 
 .main-page-footer,
-.catalog-page-footer
-{
+.catalog-page-footer {
   padding: 45px 70px 35px 70px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -1501,14 +1464,14 @@ body {
 
 /* Стили для блока социальных сетей */
 
- .social-list {
+.social-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: flex;
- }
+}
 
- .social-link::before {
+.social-link::before {
   display: block;
   content: "";
   background-color: var(--icon-second);
@@ -1516,12 +1479,12 @@ body {
   mask-position: center;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
- }
+}
 
- .social-link-vkontakte::before {
+.social-link-vkontakte::before {
   width: 24px;
   height: 14px;
-  padding: 13px 12px;
+  padding: 12px 12px;
   mask-image: url("../images/social/vkontakte.svg");
   -webkit-mask-image: url("../images/social/vkontakte.svg");
 }
@@ -1529,7 +1492,7 @@ body {
 .social-link-telegram::before {
   width: 18px;
   height: 15px;
-  padding: 12px 15px 13px 15px;
+  padding: 11px 13px 13px 16px;
   mask-image: url("../images/social/telegram.svg");
   -webkit-mask-image: url("../images/social/telegram.svg");
 }
@@ -1565,6 +1528,7 @@ body {
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
+  padding-left: 28px;
 }
 
 .contact-phone-link:hover {
@@ -1585,13 +1549,14 @@ body {
 
 .creator {
   justify-self: end;
+  padding-top: 3px;
 }
 
 .creator-link {
   display: inline-block;
   height: 100%;
 }
-
+/*
 .creator-link::before {
   width: 115px;
   height: 100%;
@@ -1604,18 +1569,18 @@ body {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   background-color: var(--icon-basic);
+}*/
+
+.creator-link:hover .creator-link-image-path {
+  fill: var(--icon-hover);
 }
 
-.creator-link:hover::before {
-  background-color: var(--icon-hover);
+.creator-link:focus .creator-link-image-path {
+  fill: var(--icon-hover);
 }
 
-.creator-link:focus::before {
-  background-color: var(--icon-hover);
-}
-
-.creator-link:active::before {
-  background-color: var(--icon-active);
+.creator-link:active .creator-link-image-path {
+  fill: var(--icon-active);
 }
 
 /* Стили для модального окна */
@@ -1641,7 +1606,7 @@ body {
 .modal-dialog-form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 91px;
+  column-gap: 45px;
 }
 
 .modal-header {
@@ -1723,7 +1688,7 @@ body {
 }
 
 .input-date::placeholder {
-  color: rgba(0, 0, 0, 0.6)
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .input-date:focus {
@@ -1756,64 +1721,61 @@ body {
   color: var(--text-error);
 }
 
-.count-label {
+.input-count-wrapper {
   display: flex;
   align-items: center;
   margin-bottom: 48px;
 }
 
 .count-button {
-  min-width: 40px;
+  position: relative;
+  min-width: 0;
+  width: 40px;
+  height: 48px;
   padding: 14px 10px;
   background-color: var(--background-body);
   color: var(--text-active);
   font-size: 32px;
   font-weight: 400;
-  text-align: center;
-  appearance: none;
 }
 
 .count-button-sign {
-  margin: 0;
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
-  position: relative;
-}
-
-.sign-bar {
-  width: 14px;
-  height: 2px;
-  background-color: var(--text-active);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 14px;
+  height: 20px;
+  padding: 0 3px;
+  border-radius: 4px;
 }
 
-.sign-bar-vertical {
-  width: 2px;
-  height: 14px;
+.count-button:hover .count-button-sign-path {
+  fill-opacity: 1;
+  fill: var(--text-basic);
 }
 
 .count-button:focus .count-button-sign {
   outline: 3px solid var(--icon-second);
-  color: var(--text-basic);
 }
 
-.count-button:hover .count-button-sign > .sign-bar {
-  background-color: var(--text-basic);
+.count-button:focus .count-button-sign-path {
+  fill-opacity: 1;
+  fill: var(--text-basic);
 }
 
 .count-button:active .count-button-sign {
   outline: none;
 }
 
-.count-button:active .count-button-sign > .sign-bar {
-  outline: none;
-  background-color: var(--text-basic);
-  opacity: 0.2;
+.count-button:active .count-button-sign-path {
+  fill-opacity: 0.2;
 }
+
+.count-button:disabled {
+  opacity: 0.1;
+}
+
 
 .input-count {
   font-family: var(--font-family);
@@ -1824,7 +1786,7 @@ body {
   color: var(--text-basic);
   width: 31px;
   background-color: var(--background-body);
-  padding: 14px 5px;
+  padding: 14px 10px;
   box-sizing: border-box;
   border: none;
   appearance: none;
@@ -1856,13 +1818,16 @@ body {
 
 
 .adults-count-button-minus {
-  margin-left: auto;
+  margin-left: 47px;
   border-radius: 4px 0 0 4px;
-  font-size: 24px;
 }
 
 .adults-count-button-plus {
   border-radius: 0 4px 4px 0;
+}
+
+.children-count-label {
+  margin-left: 25px;
 }
 
 .children-count-button-minus {
@@ -1876,7 +1841,7 @@ body {
 }
 
 .children-count-button-info {
-  min-width: 26px;
+  width: 26px;
   height: 26px;
   border-radius: 100%;
   background-color: var(--icon-second);
@@ -1906,7 +1871,7 @@ body {
   background-color: var(--text-second);
   box-shadow: 0 15px 30px 0 var(--background-basic-2);
   top: 40px;
-  left: 56%;
+  left: 50%;
   transform: translateX(-50%);
 }
 
