@@ -24,9 +24,6 @@
   --fav-count: "12";
   --link-padding: 16px;
 
-  /* Пользовательские свойства шрифтов */
-  --font-family: "PT Sans", sans-serif;
-
   /* Цвета для текста */
   --text-basic: #000000;
   --text-second: #333333;
@@ -79,7 +76,7 @@ body {
   padding: 0;
   background-color: var(--background-body);
   color: var(--text-second);
-  font-family: var(--font-family);
+  font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -91,7 +88,7 @@ body {
   display: block;
   appearance: none;
   border: none;
-  font-family: var(--font-family);
+  font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -101,7 +98,7 @@ body {
 
 .button{
   display: block;
-  font-family: var(--font-family);
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -925,7 +922,7 @@ body {
 
 .filter-form-cost-max,
 .filter-form-cost-min {
-  font-family: var(--font-family);
+  font-family: "PT Sans", sans-serif;
   box-sizing: border-box;
   appearance: none;
   border: none;
@@ -1040,7 +1037,7 @@ body {
 }
 
 .select-sort-type {
-  font-family: var(--font-family);
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: var(--text-second);
@@ -1409,7 +1406,7 @@ body {
   margin: 0;
   width: 100%;
   padding: 14px 20px;
-  font-family: var(--font-family);
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -1592,7 +1589,7 @@ body {
   background-color: var(--background-basic);
   border: none;
   padding: 64px 71px 64px 69px;
-  font-family: var(--font-family);
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   color: var(--text-basic);
   box-sizing: border-box;
@@ -1654,7 +1651,7 @@ body {
 
 
 .modal-form-label {
-  font-family: var(--font-family);
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -1672,7 +1669,7 @@ body {
 }
 
 .input-date {
-  font-family: var(--font-family);
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -1778,7 +1775,7 @@ body {
 
 
 .input-count {
-  font-family: var(--font-family);
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
