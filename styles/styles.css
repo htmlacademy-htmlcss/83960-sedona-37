@@ -1484,7 +1484,7 @@ body {
 .social-link-vkontakte::before {
   width: 24px;
   height: 14px;
-  padding: 13px 12px;
+  padding: 12px 12px;
   mask-image: url("../images/social/vkontakte.svg");
   -webkit-mask-image: url("../images/social/vkontakte.svg");
 }
@@ -1492,7 +1492,7 @@ body {
 .social-link-telegram::before {
   width: 18px;
   height: 15px;
-  padding: 12px 15px 13px 15px;
+  padding: 11px 13px 13px 16px;
   mask-image: url("../images/social/telegram.svg");
   -webkit-mask-image: url("../images/social/telegram.svg");
 }
@@ -1528,6 +1528,7 @@ body {
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
+  padding-left: 28px;
 }
 
 .contact-phone-link:hover {
@@ -1548,6 +1549,7 @@ body {
 
 .creator {
   justify-self: end;
+  padding-top: 3px;
 }
 
 .creator-link {
